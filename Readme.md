@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Валерьян Потехин](https://up.htmlacademy.ru/htmlcss-individual/1/user/2522965).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker)
 
 ---
 
