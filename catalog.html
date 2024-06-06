@@ -45,5 +45,81 @@
         </ul>
       </nav>
     </header>
+
+    <main class="main-catalog">
+      <section class="filter-content">
+        <h1>Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item-current">
+            Гостиницы
+          </li>
+        </ul>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <ul class="catalog-filter-list">
+              <li>
+                <label class="control">
+                  <input class="cotrol-input" type="checkbox" name="swimming-pool">
+                  Бассейн
+                </label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="cotrol-input" type="checkbox" name="parking space">
+                  Парковка
+                </label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="cotrol-input" type="checkbox" name="internet">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <ul class="catalog-filter-list">
+              <li>
+                <label class="control">
+                  <input class="cotrol-input-radio" type="radio" for="filter-form" name="category">
+                  Гостиница
+                </label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="cotrol-input-radio" type="radio" for="filter-form" name="category">
+                  Мотель
+                </label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="cotrol-input-radio" type="radio" for="filter-form" name="category">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="price-filter-wrapper">
+            <legend>Стоимость, ₽:</legend>
+            <input id="filter-form" type="number" name="filter-min" class="input-min" value="0">
+            <input  id="filter-form" type="number" name="filter-max" class="input-max" value="10000">
+            <input type="range" class="range-min" min="0" max="10000" value="0">
+            <input type="range" class="range-max" min="0" max="10000" value="10000">
+          </fieldset>
+          <button class="filter-button" type="submit">Применить</button>
+          <button class="filter-button" type="submit">Сбросить</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
   </body>
 </html>
