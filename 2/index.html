@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <base href="https://htmlacademy-htmlcss.github.io/2522965-sedona-1/2/">
 </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="logo">
+        <a class="logo" href="#">
           <img class="navigation-logo" alt="Логотип небольшого городка «Седона»" src="#">
         </a>
         <ul class="navigation-list">
@@ -37,14 +38,16 @@
               </span>
             </a>
           </li>
+          <li class="navigation-booking">
+            <a class="booking" href="#">
+              Хочу сюда!
+            </a>
+          </li>
         </ul>
-        <button class="navigation-booking" type="button">
-          <span class="booking">Хочу сюда!</span>
-        </button>
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="page-main">
       <h1 class="visually-hidden">Туризм по городу «Седона»</h1>
       <article class="greeting">
         <h2 class="greeting-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -85,32 +88,30 @@
         <li class="advantages-item advantages-item-background">
           <h3 class="advantages-title">Жильё</h3>
           <p class="advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          <img class="advantages-icons" alt="Домик" src="#">
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title">Еда</h3>
           <p class="advantages-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-          <img class="advantages-icons" alt="Вкусняшка" src="#">
         </li>
         <li class="advantages-item advantages-item-background">
           <h3 class="advantages-title">Сувениры</h3>
           <p class="advantages-description">Не только китайского, но и настоящего местного производства!</p>
-          <img class="advantages-icons" alt="Подарочек" src="#">
         </li>
       </ul>
       <section class="suggestion">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="registration" type="button">
+        <a class="registration" href="#">
           <span class="regestration-text">Поиск гостиницы в Седоне</span>
-        </button>
+        </a>
       </section>
       <section class="newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="text" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
+          <input type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
           <button class="newsletter-button" type="submit">Подписаться</button>
+        </form>
       </section>
     </main>
 
@@ -136,7 +137,7 @@
         </li>
       </ul>
       <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a href="#">
+      <a href="https://htmlacademy.ru/">
         <img class="footer-logo-copyright" alt="Логотип создателя вёрстки" src="#">
       </a>
     </footer>
