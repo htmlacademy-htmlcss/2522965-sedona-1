@@ -1,4 +1,4 @@
-/* Подключение локальных шрифтов "PT Sans" */
+/* Fonts "PT Sans" */
 
 @font-face {
   font-family: "PT Sans";
@@ -32,13 +32,46 @@
   font-display: swap;
 }
 
-/* Общие стили */
+/* Common styles */
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 18px;
+  background-color: #ffffff;
   line-height: 21px;
   color: #000000;
-  background-color: #ffffff;
+  font-size: 18px;
+  width: 1200px;
   margin: 0;
+}
+
+.button {
+  background-color: #756157;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Pages styles */
+
+.navigation-link {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.preview-background {
+  background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: bottom, top;
+  text-align: center;
+  height: 485px;
 }
