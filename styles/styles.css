@@ -75,3 +75,88 @@ a {
   text-align: center;
   height: 485px;
 }
+
+.greeting h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.greeting p {
+  line-height: 26px;
+  font-size: 22px;
+  color: #333333;
+}
+
+.blog-article {
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.blog-article h3 {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.advantages-item h3 {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.advantages-item p {
+  color: #333333;
+}
+
+.suggestion h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.suggestion p {
+  line-height: 26px;
+  font-size: 22px;
+  color: #333333;
+}
+
+.advantages-item {
+  background: rgba(131, 179, 211, 0.12)
+}
+
+.advantages-item-background {
+  background: rgba(131, 179, 211, 0.2)
+}
+
+.newsletter {
+  background-image: url("../images/blur-background-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.newsletter h2 {
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 30px;
+  font-size: 30px;
+}
+
+.registration {
+  line-height: 36px;
+  font-size: 20px;
+}
+
+.newsletter p {
+  line-height: 26px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.newsletter-button {
+  background-color: #82B3D3;
+  line-height: 36px;
+  font-size: 20px;
+}
