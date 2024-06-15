@@ -45,6 +45,7 @@ body {
 }
 
 .button {
+  font-family: "PT Sans", sans-serif;
   background-color: #756157;
   text-transform: uppercase;
   text-align: center;
@@ -156,6 +157,7 @@ a {
 }
 
 .newsletter-button {
+  font-family: "PT Sans", sans-serif;
   background-color: #82B3D3;
   line-height: 36px;
   font-size: 20px;
@@ -164,4 +166,93 @@ a {
 .footer-contacts-address-phone {
   line-height: 40px;
   font-size: 40px;
+}
+
+.filter-content {
+  background-image: url(../images/blur-catalog-header.jpg); /* height 412px */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter-selection {
+  font-family: "PT Sans", sans-serif;
+  line-height: 21px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.filter-content {
+  color: #ffffff;
+}
+
+.filter-content h1 {
+  line-height: 78px;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.breadcrumbs li {
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.catalog-filter-group legend {
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.control {
+  line-height: 23px;
+}
+
+.filter-button {
+  background-color: #82B3D3;
+}
+
+.reset-button {
+  background: transparent;
+}
+
+.results h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.product-card-link h3 {
+  line-height: 28px;
+  font-size: 24px;
+}
+
+.product-card-description-wrapper b {
+  font-weight: 400;
+}
+
+.description-card-button {
+  background-color: #756157;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.to-favorites-button {
+  background-color: #82B3D3;
+}
+
+.rating {
+  line-height: 20px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.switch-button {
+  background-color: #82B3D3;
+  text-align: center;
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
 }

@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="navigation-booking">
-            <a class="booking" href="#">
+            <a class="booking button" href="#">
               Хочу сюда!
             </a>
           </li>
@@ -114,19 +114,17 @@
             <input type="range" class="range-min" min="0" max="10000" value="0">
             <input type="range" class="range-max" min="0" max="10000" value="10000">
           </fieldset>
-          <button class="filter-button" type="submit">Применить</button>
-          <button class="filter-button" type="submit">Сбросить</button>
+          <button class="filter-button button" type="submit">Применить</button>
+          <button class="reset-button button" type="reset">Сбросить</button>
         </form>
       </section>
       <section class="results">
         <h2>Найдено гостиниц: <span class="results-number">38</span></h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
-          <select size="1" aria-label="Сортировка">
-            <option selected value="s1">Сначала дешёвые</option>
-            <option value="s2">Сначала дорогие</option>
-            <option value="s3">Сначала популярные</option>
-          </select>
-        </form>
+        <select  class="filter-selection" size="1" aria-label="Сортировка">
+          <option selected value="s1">Сначала дешёвые</option>
+          <option value="s2">Сначала дорогие</option>
+          <option value="s3">Сначала популярные</option>
+        </select>
         <ul class="layout-list">
           <li>
             <a class="layout-item layout-item-current" href="#">
@@ -157,7 +155,7 @@
               <p>Гостиница</p>
               <b>От 4000 ₽</b>
               <a class="description-card-button" href="#">Подробнее</a>
-              <a class="description-card-button" href="#">В избранное</a>
+              <a class="description-card-button to-favorites-button" href="#">В избранное</a>
               <ul class="stars-count">
                 <li>
                   <img class="stars" src="#" alt="1">
@@ -172,7 +170,7 @@
                   <img class="stars" src="#" alt="4">
                 </li>
               </ul>
-              <a class="rating" href="#">Рейтинг: 8,5</a>
+              <p class="rating" href="#">Рейтинг: 8,5</p>
             </div>
           </li>
           <li class="product-item">
@@ -184,7 +182,7 @@
               <p>Гостиница</p>
               <b>От 5000 ₽</b>
               <a class="description-card-button" href="#">Подробнее</a>
-              <a class="description-card-button" href="#">В избранное</a>
+              <a class="description-card-button to-favorites-button" href="#">В избранное</a>
               <ul class="stars-count">
                 <li>
                   <img class="stars" src="#" alt="1">
@@ -199,7 +197,7 @@
                   <img class="stars" src="#" alt="4">
                 </li>
               </ul>
-              <a class="rating" href="#">Рейтинг: 9,2</a>
+              <p class="rating" href="#">Рейтинг: 9,2</p>
             </div>
           </li>
           <li class="product-item">
@@ -211,7 +209,7 @@
               <p>Гостиница</p>
               <b>От 2500 ₽</b>
               <a class="description-card-button" href="#">Подробнее</a>
-              <a class="description-card-button" href="#">В избранное</a>
+              <a class="description-card-button to-favorites-button" href="#">В избранное</a>
               <ul class="stars-count">
                 <li>
                   <img class="stars" src="#" alt="1">
@@ -223,7 +221,7 @@
                   <img class="stars" src="#" alt="3">
                 </li>
               </ul>
-              <a class="rating" href="#">Рейтинг: 6,9</a>
+              <p class="rating" href="#">Рейтинг: 6,9</p>
             </div>
           </li>
           <li class="product-item">
@@ -235,7 +233,7 @@
               <p>Гостиница</p>
               <b>От 1500 ₽</b>
               <a class="description-card-button" href="#">Подробнее</a>
-              <a class="description-card-button" href="#">В избранное</a>
+              <a class="description-card-button to-favorites-button" href="#">В избранное</a>
               <ul class="stars-count">
                 <li>
                   <img class="stars" src="#" alt="1">
@@ -244,7 +242,7 @@
                   <img class="stars" src="#" alt="2">
                 </li>
               </ul>
-              <a class="rating" href="#">Рейтинг: 5,0</a>
+              <p class="rating" href="#">Рейтинг: 5,0</p>
             </div>
           </li>
         </ul>
@@ -267,7 +265,7 @@
         <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
-          <button class="newsletter-button" type="submit">Подписаться</button>
+          <button class="newsletter-button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
