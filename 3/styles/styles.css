@@ -1,0 +1,258 @@
+/* Fonts "PT Sans" */
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  font-display: swap;
+}
+
+/* Common styles */
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #ffffff;
+  line-height: 21px;
+  color: #000000;
+  font-size: 18px;
+  width: 1200px;
+  margin: 0;
+}
+
+.button {
+  font-family: "PT Sans", sans-serif;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Pages styles */
+
+.navigation-link {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.preview-background {
+  background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: bottom, top;
+  text-align: center;
+  height: 485px;
+}
+
+.greeting h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.greeting p {
+  line-height: 26px;
+  font-size: 22px;
+  color: #333333;
+}
+
+.blog-article {
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.blog-article h3 {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.advantages-item h3 {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.advantages-item p {
+  color: #333333;
+}
+
+.suggestion h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.suggestion p {
+  line-height: 26px;
+  font-size: 22px;
+  color: #333333;
+}
+
+.advantages-item {
+  background: rgba(131, 179, 211, 0.12)
+}
+
+.advantages-item-background {
+  background: rgba(131, 179, 211, 0.2)
+}
+
+.newsletter {
+  background-image: url("../images/blur-background-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.newsletter h2 {
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 30px;
+  font-size: 30px;
+}
+
+.registration {
+  line-height: 36px;
+  font-size: 20px;
+}
+
+.newsletter p {
+  line-height: 26px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.newsletter-button {
+  font-family: "PT Sans", sans-serif;
+  background-color: #82B3D3;
+  line-height: 36px;
+  font-size: 20px;
+}
+
+.footer-contacts-address-phone {
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.filter-content {
+  background-image: url(../images/blur-catalog-header.jpg); /* height 412px */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter-selection {
+  font-family: "PT Sans", sans-serif;
+  line-height: 21px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.filter-content {
+  color: #ffffff;
+}
+
+.filter-content h1 {
+  line-height: 78px;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.breadcrumbs li {
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.catalog-filter-group legend {
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.control {
+  line-height: 23px;
+}
+
+.filter-button {
+  background-color: #82B3D3;
+}
+
+.reset-button {
+  background: transparent;
+}
+
+.results h2 {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.product-card-link h3 {
+  line-height: 28px;
+  font-size: 24px;
+}
+
+.product-card-description-wrapper b {
+  font-weight: 400;
+}
+
+.description-card-button {
+  background-color: #756157;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.to-favorites-button {
+  background-color: #82B3D3;
+}
+
+.rating {
+  line-height: 20px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.switch-button {
+  background-color: #82B3D3;
+  text-align: center;
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
