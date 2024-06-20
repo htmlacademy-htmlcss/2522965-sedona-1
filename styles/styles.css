@@ -89,6 +89,19 @@ p {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Pages styles */
 
 .main-container {
@@ -330,6 +343,7 @@ p {
 .navigation {
   height: 64px;
   display: flex;
+  align-items: center;
 }
 
 .navigation-list {
@@ -444,4 +458,19 @@ p {
   height: 22px;
   border: none;
   padding: 14px 20px;
+}
+
+.page-footer{
+  padding: 40px 70px 30px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list {
+  display: flex;
+}
+
+.booking {
+  padding: 8px 34px;
 }
