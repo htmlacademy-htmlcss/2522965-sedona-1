@@ -40,7 +40,6 @@ body {
   line-height: 21px;
   color: #000000;
   font-size: 18px;
-  width: 1200px;
   margin: 0;
 }
 
@@ -61,6 +60,11 @@ a {
 }
 
 /* Pages styles */
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .navigation-link {
   line-height: 24px;
