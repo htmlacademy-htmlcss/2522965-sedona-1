@@ -34,13 +34,19 @@
 
 /* Common styles */
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   background-color: #ffffff;
+  flex-direction: column;
   line-height: 21px;
+  min-height: 100%;
   color: #000000;
   font-size: 18px;
-  width: 1200px;
+  display: flex;
   margin: 0;
 }
 
@@ -53,6 +59,7 @@ body {
   font-weight: 700;
   color: #ffffff;
   font-size: 16px;
+  border: none;
 }
 
 a {
@@ -60,7 +67,51 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Pages styles */
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .navigation-link {
   line-height: 24px;
@@ -75,23 +126,42 @@ a {
   background-position: bottom, top;
   text-align: center;
   height: 485px;
+  margin-bottom: 69px;
 }
 
 .greeting h2 {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .greeting p {
   line-height: 26px;
   font-size: 22px;
   color: #333333;
+  text-align: center;
+}
+
+.greeting {
+  margin-bottom: 69px;
+}
+
+.greeting-2 {
+  margin-bottom: 64px;
+}
+
+.greeting-2 h2 {
+  margin-bottom: 20px;
 }
 
 .blog-article {
   background-color: #82B3D3;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
 .blog-article h3 {
@@ -104,37 +174,47 @@ a {
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
+  margin-bottom: 62px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .advantages-item p {
   color: #333333;
+  text-align: center;
 }
 
 .suggestion h2 {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .suggestion p {
   line-height: 26px;
   font-size: 22px;
   color: #333333;
+  margin-bottom: 54px;
 }
 
 .advantages-item {
-  background: rgba(131, 179, 211, 0.12)
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  padding: 112.5px 85px;
 }
 
 .advantages-item-background {
-  background: rgba(131, 179, 211, 0.2)
+  background: rgba(131, 179, 211, 0.2);
 }
 
 .newsletter {
   background-image: url("../images/blur-background-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  text-align: center;
+  padding: 96px 0 104px;
 }
 
 .newsletter h2 {
@@ -142,7 +222,8 @@ a {
   font-weight: 700;
   color: #ffffff;
   font-size: 30px;
-  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .registration {
@@ -154,6 +235,7 @@ a {
   line-height: 26px;
   color: #ffffff;
   font-size: 22px;
+  margin-bottom: 54px;
 }
 
 .newsletter-button {
@@ -161,6 +243,7 @@ a {
   background-color: #82B3D3;
   line-height: 36px;
   font-size: 20px;
+  padding: 8px 50px;
 }
 
 .footer-contacts-address-phone {
@@ -169,9 +252,12 @@ a {
 }
 
 .filter-content {
-  background-image: url(../images/blur-catalog-header.jpg); /* height 412px */
+  background-image: url(../images/blur-catalog-header.jpg);
+  min-height: 412px;
   background-repeat: no-repeat;
   background-size: contain;
+  color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .filter-selection {
@@ -181,14 +267,11 @@ a {
   color: #333333;
 }
 
-.filter-content {
-  color: #ffffff;
-}
-
 .filter-content h1 {
   line-height: 78px;
   font-weight: 700;
   font-size: 60px;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs li {
@@ -196,27 +279,24 @@ a {
   font-size: 16px;
 }
 
-.catalog-filter-group legend {
+.catalog-filter-group legend,
+.price-filter-wrapper legend {
   line-height: 24px;
+  font-weight: 700;
   font-size: 20px;
+  margin-bottom: 32px;
 }
 
 .control {
   line-height: 23px;
 }
 
-.filter-button {
-  background-color: #82B3D3;
-}
-
-.reset-button {
-  background: transparent;
-}
-
 .results h2 {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  text-transform: uppercase;
+  margin-right: auto;
 }
 
 .product-card-link h3 {
@@ -249,10 +329,257 @@ a {
 }
 
 .switch-button {
+  display: flex;
   background-color: #82B3D3;
-  text-align: center;
   line-height: 36px;
   font-weight: 700;
   font-size: 20px;
   color: #ffffff;
+  height: 60px;
+  width: 60px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  width: 339px;
+  display: flex;
+}
+
+.navigation-user {
+  max-width: 268px;
+  margin-left: auto;
+}
+
+.navigation-logo {
+  display: block;
+}
+
+.preview-sedona {
+  display: block;
+  margin: 0 auto;
+}
+
+.blog-article-description {
+  display: flex;
+  flex-direction: column;
+  padding: 102px 85px;
+  width: 400px;
+}
+
+.blog-article-description h3 {
+  display: block;
+  margin-bottom: 62px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.blog-article-description p {
+  display: block;
+  text-align: center;
+}
+
+.advantages {
+  display: flex;
+}
+
+.blog-article-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 64px;
+}
+
+.advantages-item-icons {
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  padding: 81px 85px;
+}
+
+.advantages-item-icons h3 {
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-item-icons p {
+  color: #333333;
+  text-align: center;
+}
+
+.advantages-description-wrapper {
+  height: 223px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.advantage-icon-habitation {
+  background-image: url("../images/icons/advantage-icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.advantage-icon-food {
+  background-image: url("../images/icons/advantage-icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.advantage-icon-present {
+  background-image: url("../images/icons/advantage-icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.suggestion {
+  padding: 96px 0px;
+  text-align: center;
+}
+
+.registration {
+  padding: 8px 50px;
+}
+
+/*потом вопрос по стилизации инпута*/
+.newsletter-text {
+  background-color: #F2F2F2;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  height: 22px;
+  border: none;
+  padding: 14px 20px;
+}
+
+.page-footer{
+  padding: 40px 70px 30px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list {
+  display: flex;
+}
+
+.booking {
+  padding: 8px 34px;
+}
+
+/* Section filter-content */
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.catalog-filter-list li {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-group:first-child {
+  margin-right: 70px;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-right: 140.15px;
+}
+
+.catalog-filter-list {
+  width: 150.43px;
+}
+
+.filter-content-components-wrapper {
+  padding: 35px 70px 70px 70px;
+}
+
+.filter-button {
+  margin-bottom: 32px;
+  padding: 8px 50px;
+  background-color: #82B3D3;
+}
+
+.reset-button {
+  background: transparent;
+  padding: 8px 50px;
+}
+
+.results {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.product-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  margin-right: 20px;
+}
+
+.product-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.product-cards {
+  margin-bottom: 80px;
+}
+
+.page-switch {
+  display: flex;
+  margin-bottom: 60px;;
+}
+
+.switch-button-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pages-count {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.newsletter-catalog {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 96px 0 104px;
+}
+
+.newsletter-catalog h2 {
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.newsletter-catalog p {
+  line-height: 26px;
+  color: #333333;
+  font-size: 22px;
+  margin-bottom: 54px;
 }
