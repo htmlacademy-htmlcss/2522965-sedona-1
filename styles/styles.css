@@ -540,6 +540,10 @@ fieldset {
   margin-bottom: 16px;
 }
 
+.catalog-filter-list li:last-child {
+  margin-bottom: 0px;
+}
+
 .catalog-filter-group:first-child {
   margin-right: 70px;
 }
