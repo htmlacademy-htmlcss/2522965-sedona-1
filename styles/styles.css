@@ -386,6 +386,7 @@ p {
   height: 64px;
   display: flex;
   align-items: center;
+  padding: 0px 70px;
 }
 
 .navigation-list {
