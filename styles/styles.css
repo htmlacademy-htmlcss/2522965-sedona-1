@@ -431,7 +431,7 @@ p {
 }
 
 .advantages-description-wrapper {
-  height: 223px;
+  padding-top: 102px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
