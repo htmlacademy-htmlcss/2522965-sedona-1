@@ -579,8 +579,11 @@ fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
+/*разобраться потом: "почему ширина 341px при width: 300px", с одной стороны из за бордера, но почему не 342 пикселя */
 .product-item {
   padding: 20px;
   border: 1px solid #E6E6E6;
@@ -588,11 +591,11 @@ fieldset {
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 16px;
-  width: 300px;
+  width: 298.4px;
 }
 
 .product-cards {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   padding: 0px 70px;
 }
 
@@ -615,7 +618,7 @@ fieldset {
 .newsletter-catalog {
   background-color: #ffffff;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 258px 104px 258px;
 }
 
 .newsletter-catalog h2 {
