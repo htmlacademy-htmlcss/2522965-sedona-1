@@ -539,29 +539,31 @@ fieldset {
 .results {
   display: flex;
   margin-bottom: 40px;
+  width: auto;
+  padding: 0px 70px;
+  text-align: center;
 }
 
 .product-cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .product-item {
-  margin-right: 20px;
-}
-
-.product-item:nth-child(3n) {
-  margin-right: 0;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
 }
 
 .product-cards {
   margin-bottom: 80px;
+  padding: 0px 70px;
 }
 
 .page-switch {
   display: flex;
-  margin-bottom: 60px;;
+  margin-bottom: 60px;
+  padding: 0px 70px;
 }
 
 .switch-button-current {
