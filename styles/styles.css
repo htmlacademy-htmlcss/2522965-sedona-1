@@ -127,6 +127,7 @@ p {
 }
 
 .preview-background {
+  overflow: hidden;
   background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
@@ -371,7 +372,7 @@ p {
 
 .preview-sedona {
   display: block;
-  margin: 0 auto;
+  margin: 51px auto 0px auto;
 }
 
 .blog-article-description {
