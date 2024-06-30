@@ -221,7 +221,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 258px 104px 258px;
 }
 
 .newsletter h2 {
@@ -253,6 +253,7 @@ p {
   line-height: 36px;
   font-size: 20px;
   padding: 8px 50px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .footer-contacts-address-phone {
@@ -464,10 +465,10 @@ p {
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  width: 452px;
-  height: 22px;
   border: none;
+  flex-grow: 1;
   padding: 14px 20px;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .page-footer{
@@ -593,4 +594,8 @@ fieldset {
   color: #333333;
   font-size: 22px;
   margin-bottom: 54px;
+}
+
+.newsletter-form {
+  display: flex;
 }
