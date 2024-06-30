@@ -57,6 +57,7 @@ body {
   text-align: center;
   font-weight: 700;
   border: none;
+  color: #ffffff;
 }
 
 a {
@@ -483,7 +484,6 @@ p {
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
 }
 
 /* Section filter-content */
