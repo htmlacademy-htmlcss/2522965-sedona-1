@@ -236,6 +236,8 @@ p {
 .registration {
   line-height: 36px;
   font-size: 20px;
+  display: inline-block;
+  padding: 8px 50px;
 }
 
 .newsletter p {
@@ -453,15 +455,10 @@ p {
 }
 
 .suggestion {
-  padding: 96px 0px;
   text-align: center;
+  padding: 96px 0px;
 }
 
-.registration {
-  padding: 8px 50px;
-}
-
-/*потом вопрос по стилизации инпута*/
 .newsletter-text {
   background-color: #F2F2F2;
   font-family: inherit;
@@ -488,6 +485,7 @@ p {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
+  display: inline-block;
 }
 
 /* Section filter-content */
