@@ -209,7 +209,6 @@ p {
 
 .advantages-item {
   background: rgba(131, 179, 211, 0.12);
-  width: 400px;
   padding: 112.5px 85px;
 }
 
@@ -395,7 +394,8 @@ p {
 }
 
 .advantages {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .blog-article-2 {
@@ -405,9 +405,12 @@ p {
 }
 
 .advantages-item-icons {
-  background: rgba(131, 179, 211, 0.12);
-  width: 400px;
+  background: #ffffff;
   padding: 81px 85px;
+}
+
+.advantages-item-icons-background {
+  background: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-icons h3 {
