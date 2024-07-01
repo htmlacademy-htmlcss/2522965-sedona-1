@@ -40,7 +40,7 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   flex-direction: column;
   line-height: 21px;
   min-height: 100%;
@@ -55,11 +55,12 @@ body {
   background-color: #756157;
   text-transform: uppercase;
   text-align: center;
-  line-height: 20px;
   font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
   border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 a {
@@ -111,6 +112,8 @@ p {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px  0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navigation-link {
@@ -119,7 +122,16 @@ p {
   font-size: 20px;
 }
 
+.navigation-item {
+  padding: 20px 16px;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
 .preview-background {
+  overflow: hidden;
   background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
@@ -201,7 +213,6 @@ p {
 
 .advantages-item {
   background: rgba(131, 179, 211, 0.12);
-  width: 400px;
   padding: 112.5px 85px;
 }
 
@@ -214,7 +225,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 258px 104px 258px;
 }
 
 .newsletter h2 {
@@ -229,6 +240,8 @@ p {
 .registration {
   line-height: 36px;
   font-size: 20px;
+  display: inline-block;
+  padding: 8px 50px;
 }
 
 .newsletter p {
@@ -244,6 +257,7 @@ p {
   line-height: 36px;
   font-size: 20px;
   padding: 8px 50px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .footer-contacts-address-phone {
@@ -260,11 +274,16 @@ p {
   margin-bottom: 50px;
 }
 
+/*Вопрос, как стилизовать под нужную высоту, ибо предустановлены отступы заранее*/
 .filter-selection {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
   font-size: 18px;
   color: #333333;
+  border: 2px solid #E5E5E5;
+  width: 292px;
+  height: 49px;
+  padding: 0px 20px;
 }
 
 .filter-content h1 {
@@ -273,7 +292,7 @@ p {
   font-size: 60px;
   margin-bottom: 8px;
 }
-
+*
 .breadcrumbs li {
   line-height: 21px;
   font-size: 16px;
@@ -285,6 +304,10 @@ p {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 32px;
+}
+
+.price-filter-wrapper {
+  margin-right: 70px;
 }
 
 .control {
@@ -304,8 +327,29 @@ p {
   font-size: 24px;
 }
 
-.product-card-description-wrapper b {
+.product-card-image {
+  display: block;
+}
+
+/*потом разобраться почему разница в 2 пикселя от высоты в макете*/
+
+.product-card-link-image {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.product-card-link {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.stars-count {
+  display: flex;
+}
+
+.product-item b {
   font-weight: 400;
+  text-align: right;
 }
 
 .description-card-button {
@@ -316,16 +360,23 @@ p {
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
+  padding: 8px 26px;
 }
 
 .to-favorites-button {
   background-color: #82B3D3;
+  padding: 8px 20px;
 }
 
 .rating {
+  background-color: #F2F2F2;
   line-height: 20px;
   font-size: 16px;
   color: #333333;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 4px;
+  padding: 9px 22px 8px 22px;
 }
 
 .switch-button {
@@ -340,17 +391,19 @@ p {
   margin-right: 8px;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
 }
 
 .navigation {
   height: 64px;
   display: flex;
   align-items: center;
+  padding: 0px 70px;
 }
 
 .navigation-list {
-  width: 339px;
   display: flex;
+  align-items: center;
 }
 
 .navigation-user {
@@ -364,7 +417,7 @@ p {
 
 .preview-sedona {
   display: block;
-  margin: 0 auto;
+  margin: 51px auto 0px auto;
 }
 
 .blog-article-description {
@@ -387,7 +440,8 @@ p {
 }
 
 .advantages {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .blog-article-2 {
@@ -397,9 +451,12 @@ p {
 }
 
 .advantages-item-icons {
-  background: rgba(131, 179, 211, 0.12);
-  width: 400px;
+  background: #ffffff;
   padding: 81px 85px;
+}
+
+.advantages-item-icons-background {
+  background: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-icons h3 {
@@ -417,7 +474,7 @@ p {
 }
 
 .advantages-description-wrapper {
-  height: 223px;
+  padding-top: 102px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -442,24 +499,19 @@ p {
 }
 
 .suggestion {
-  padding: 96px 0px;
   text-align: center;
+  padding: 96px 0px;
 }
 
-.registration {
-  padding: 8px 50px;
-}
-
-/*потом вопрос по стилизации инпута*/
 .newsletter-text {
   background-color: #F2F2F2;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  width: 452px;
-  height: 22px;
   border: none;
+  flex-grow: 1;
   padding: 14px 20px;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .page-footer{
@@ -475,6 +527,9 @@ p {
 
 .booking {
   padding: 8px 34px;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
 }
 
 /* Section filter-content */
@@ -487,6 +542,7 @@ fieldset {
 
 .catalog-filter {
   display: flex;
+  min-height: 160px;
 }
 
 .breadcrumbs {
@@ -495,6 +551,10 @@ fieldset {
 
 .catalog-filter-list li {
   margin-bottom: 16px;
+}
+
+.catalog-filter-list li:last-child {
+  margin-bottom: 0px;
 }
 
 .catalog-filter-group:first-child {
@@ -519,37 +579,51 @@ fieldset {
   background-color: #82B3D3;
 }
 
+.results-filter-button-wrapper {
+  padding-top: 56px;
+}
+
 .reset-button {
   background: transparent;
-  padding: 8px 50px;
+  padding: 8px 57.5px;
 }
 
 .results {
   display: flex;
   margin-bottom: 40px;
+  width: auto;
+  padding: 0px 70px;
+  align-items: center;
 }
 
 .product-cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
+/*разобраться потом: "почему ширина 341px при width: 300px", с одной стороны из за бордера, но почему не 342 пикселя */
 .product-item {
-  margin-right: 20px;
-}
-
-.product-item:nth-child(3n) {
-  margin-right: 0;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 16px;
+  width: 300px;
 }
 
 .product-cards {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  padding: 0px 70px;
 }
 
 .page-switch {
   display: flex;
-  margin-bottom: 60px;;
+  margin-bottom: 60px;
+  padding: 0px 70px;
 }
 
 .switch-button-current {
@@ -565,7 +639,7 @@ fieldset {
 .newsletter-catalog {
   background-color: #ffffff;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 258px 104px 258px;
 }
 
 .newsletter-catalog h2 {
@@ -582,4 +656,111 @@ fieldset {
   color: #333333;
   font-size: 22px;
   margin-bottom: 54px;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.form-text {
+  position: relative;
+  width: 143px;
+}
+
+.form-text,
+.input-min,
+.input-max {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.input-min,
+.input-max {
+  padding: 12px 37px 12px 20px;
+  width: 86px; /*143*/
+  height: 24px; /*48*/
+  font-weight: 700;
+  background-color: #F2F2F2;
+  -moz-appearance: textfield;
+}
+
+.input-min {
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.input-max {
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.static-value {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: #d7d7d7; /*тест цвет, настоящий в фигме не нашел*/
+}
+
+.form-text-wrapper {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 44px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.slider {
+  height: 4px;
+  width: 287px;
+  background-color: #5f686c;
+  position: relative;
+}
+
+.slider .progress {
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 10%;
+  background-color: #ffffff;
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  top: -6px;
+  height: 4px;
+  width: 100%;
+  background: none;
+  -webkit-appearance: none;
+  pointer-events: none;
+  margin-left: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  background: #FFFFFF;
+  border-radius: 25%;
+  pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  -moz-appearance: none;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 25%;
+  pointer-events: auto;
 }
