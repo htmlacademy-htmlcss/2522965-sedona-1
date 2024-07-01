@@ -272,11 +272,16 @@ p {
   margin-bottom: 50px;
 }
 
+/*Вопрос, как стилизовать под нужную высоту, ибо предустановлены отступы заранее*/
 .filter-selection {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
   font-size: 18px;
   color: #333333;
+  border: 2px solid #E5E5E5;
+  width: 292px;
+  height: 49px;
+  padding: 0px 20px;
 }
 
 .filter-content h1 {
@@ -576,7 +581,7 @@ fieldset {
   margin-bottom: 40px;
   width: auto;
   padding: 0px 70px;
-  text-align: center;
+  align-items: center;
 }
 
 .product-cards-list {
