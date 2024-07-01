@@ -59,6 +59,8 @@ body {
   border: none;
   color: #ffffff;
   border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 a {
@@ -302,6 +304,10 @@ p {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 32px;
+}
+
+.price-filter-wrapper {
+  margin-right: 70px;
 }
 
 .control {
@@ -572,9 +578,13 @@ fieldset {
   background-color: #82B3D3;
 }
 
+.results-filter-button-wrapper {
+  padding-top: 56px;
+}
+
 .reset-button {
   background: transparent;
-  padding: 8px 50px;
+  padding: 8px 57.5px;
 }
 
 .results {
