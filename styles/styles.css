@@ -595,7 +595,7 @@ fieldset {
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 16px;
-  width: 298.4px;
+  width: 300px;
 }
 
 .product-cards {
