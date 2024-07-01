@@ -112,10 +112,24 @@
               </fieldset>
               <fieldset class="price-filter-wrapper">
                 <legend>Стоимость, ₽:</legend>
-                <input id="filter-form" type="number" name="filter-min" class="input-min" value="0">
-                <input id="filter-form" type="number" name="filter-max" class="input-max" value="10000">
-                <input type="range" class="range-min" min="0" max="10000" value="0">
-                <input type="range" class="range-max" min="0" max="10000" value="10000">
+                <div class="form-text-wrapper">
+                  <div class="form-text">
+                    <input id="filter-form" type="number" name="filter-min" class="input-min" value="0">
+                    <label class="static-value">от</label>
+                  </div>
+                  <div class="form-text">
+                    <input id="filter-form" type="number" name="filter-max" class="input-max" value="9000">
+                    <label class="static-value">до</label>
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="progress">
+                  </div>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+                  <input type="range" class="range-max" min="0" max="10000" value="9000" step="100">
+                </div>
               </fieldset>
               <div class="results-filter-button-wrapper">
                 <button class="filter-button button" type="submit">Применить</button>

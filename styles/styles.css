@@ -535,6 +535,7 @@ fieldset {
 
 .catalog-filter {
   display: flex;
+  min-height: 160px;
 }
 
 .breadcrumbs {
@@ -648,4 +649,107 @@ fieldset {
 
 .newsletter-form {
   display: flex;
+}
+
+.form-text {
+  position: relative;
+  width: 143px;
+}
+
+.form-text,
+.input-min,
+.input-max {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.input-min,
+.input-max {
+  padding: 12px 37px 12px 20px;
+  width: 86px; /*143*/
+  height: 24px; /*48*/
+  font-weight: 700;
+  background-color: #F2F2F2;
+  -moz-appearance: textfield;
+}
+
+.input-min {
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.input-max {
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.static-value {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: #d7d7d7; /*тест цвет, настоящий в фигме не нашел*/
+}
+
+.form-text-wrapper {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 44px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.slider {
+  height: 4px;
+  width: 287px;
+  background-color: #5f686c;
+  position: relative;
+}
+
+.slider .progress {
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 10%;
+  background-color: #ffffff;
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  top: -6px;
+  height: 4px;
+  width: 100%;
+  background: none;
+  -webkit-appearance: none;
+  pointer-events: none;
+  margin-left: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  background: #FFFFFF;
+  border-radius: 25%;
+  pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  -moz-appearance: none;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 25%;
+  pointer-events: auto;
 }
