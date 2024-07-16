@@ -542,10 +542,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
 }
 
 .social-list {
   display: flex;
+  align-items: center;
 }
 
 .booking {
@@ -838,4 +840,47 @@ input[type="range"]::-moz-range-thumb {
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
+}
+
+.social-button-vk {
+  display: block;
+  height: 14px;
+  width: 24px;
+  background: url("../images/icons/social-icon-vk.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-tg {
+  display: block;
+  height: 16px;
+  width: 18px;
+  background: url("../images/icons/social-icon-tg.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-yt {
+  display: block;
+  height: 17px;
+  width: 22px;
+  background: url("../images/icons/social-icon-yt.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-logo-copyright {
+  display: block;
+  height: 33px;
+  width: 115px;
+  background: url("../images/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+}
+
+.social-list li {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list a {
+  display: flex;
 }
