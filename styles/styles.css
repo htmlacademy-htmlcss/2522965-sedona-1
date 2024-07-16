@@ -811,7 +811,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
 }
 
-.test {
+.card-counts-number {
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
