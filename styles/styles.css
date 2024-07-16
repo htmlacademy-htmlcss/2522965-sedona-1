@@ -176,12 +176,6 @@ p {
   justify-content: space-between;
 }
 
-.blog-article h3 {
-  line-height: 28px;
-  font-weight: 700;
-  font-size: 24px;
-}
-
 .advantages-item h3 {
   line-height: 28px;
   font-weight: 700;
@@ -428,14 +422,29 @@ p {
 }
 
 .blog-article-description h3 {
-  display: block;
-  margin-bottom: 62px;
   text-align: center;
   text-transform: uppercase;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 32px;
+  margin-bottom: 30px;
+}
+
+.blog-article-description h3:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 85px;
+  right: 85px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .blog-article-description p {
-  display: block;
   text-align: center;
 }
 
