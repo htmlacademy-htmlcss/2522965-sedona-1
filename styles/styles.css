@@ -727,7 +727,7 @@ input::-webkit-inner-spin-button {
   height: 4px;
   position: absolute;
   left: 0;
-  right: 10%;
+  right: 25%;
   background-color: #ffffff;
 }
 
