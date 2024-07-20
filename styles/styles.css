@@ -90,6 +90,11 @@ p {
   margin: 0;
 }
 
+legend {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -127,7 +132,9 @@ p {
 }
 
 .logo {
-  margin-right: 30px;
+  margin-top: 5px; /*вопрос потом, почему без маргина пикча сверху съедается */
+  display: block;
+  margin-right: 28px;
 }
 
 .preview-background {
@@ -151,6 +158,7 @@ p {
 }
 
 .greeting p {
+  display: inline-block;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -159,6 +167,9 @@ p {
 
 .greeting {
   margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .greeting-2 {
@@ -282,7 +293,6 @@ p {
   margin-bottom: 50px;
 }
 
-/*Вопрос, как стилизовать под нужную высоту, ибо предустановлены отступы заранее*/
 .filter-selection {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
@@ -290,8 +300,9 @@ p {
   color: #333333;
   border: 2px solid #E5E5E5;
   width: 292px;
+  padding: 10px 18px; /*10px тест вариация все из за тех же бордеров в хроме */
+  margin-right: 70px;
   height: 49px;
-  padding: 0px 20px;
 }
 
 .filter-content h1 {
@@ -353,6 +364,7 @@ p {
 
 .stars-count {
   display: flex;
+  align-items: center;
 }
 
 .product-item b {
@@ -415,7 +427,6 @@ p {
 }
 
 .navigation-user {
-  max-width: 268px;
   margin-left: auto;
 }
 
@@ -554,7 +565,6 @@ p {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
-  display: inline-block;
 }
 
 /* Section filter-content */
@@ -571,7 +581,10 @@ fieldset {
 }
 
 .breadcrumbs {
+  display: flex;
   margin-bottom: 40px;
+  align-items: center;
+  gap: 10px;
 }
 
 .catalog-filter-list li {
@@ -804,6 +817,7 @@ input[type="range"]::-moz-range-thumb {
   width: 20px;
   background: url("../images/icons/search.svg");
   background-repeat: no-repeat;
+  background-position: bottom 0.5px right 0.5px;
 }
 
 .card-icon-nav {
@@ -883,4 +897,76 @@ input[type="range"]::-moz-range-thumb {
 
 .social-list a {
   display: flex;
+}
+
+.layout-list {
+  display: flex;
+  gap: 8px;
+}
+
+.view-icon-catalog {
+  display: block;
+  height: 14px;
+  width: 16px;
+  padding: 15px 14px;
+  border: 2px solid #E5E5E5; /*разобраться потом с хромом, почему от масштабирования ставится 1.6 пикселей */
+  border-radius: 4px;
+}
+
+.layout-item-grids {
+  background: url("../images/icons/view-icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-extensive {
+  background: url("../images/icons/view-icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-linearly {
+  background: url("../images/icons/view-icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-current {
+  border: 2px solid #000000;
+}
+
+.desired {
+  background-color: #7DB54F;
+  padding: 8px 18px;
+}
+
+.stars-count li {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url("../images/icons/star-icon.svg");
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}
+
+.stars-count li:last-child {
+  margin-right: 0px;
+}
+
+.breadcrumbs-home {
+  display: block;
+  width: 12px;
+  height: 15px;
+  background: url("../images/icons/breadcrumbs-home-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.breadcrumbs-arrow {
+  display: block;
+  width: 8px;
+  height: 20px;
+  background: url("../images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
