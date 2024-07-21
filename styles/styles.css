@@ -41,12 +41,13 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
   background-color: #F2F2F2;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 21px;
   min-height: 100%;
   color: #000000;
   font-size: 18px;
-  display: flex;
   margin: 0;
 }
 
@@ -869,6 +870,7 @@ input[type="range"]::-moz-range-thumb {
   width: 18px;
   background: url("../images/icons/social-icon-tg.svg");
   background-repeat: no-repeat;
+  background-position: top;
 }
 
 .social-button-yt {
@@ -879,23 +881,24 @@ input[type="range"]::-moz-range-thumb {
   background-repeat: no-repeat;
 }
 
+.social-button-vk-wrapper {
+  padding: 13px 11.67px;
+}
+
+.social-button-tg-wrapper {
+  padding: 12px 14.67px;
+}
+
+.social-button-yt-wrapper {
+  padding: 11.5px 12.67px;
+}
+
 .footer-logo-copyright {
   display: block;
   height: 33px;
   width: 115px;
   background: url("../images/logo-htmlacademy.svg");
   background-repeat: no-repeat;
-}
-
-.social-list li {
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-list a {
-  display: flex;
 }
 
 .layout-list {
