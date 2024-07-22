@@ -571,7 +571,6 @@ fieldset {
 
 .catalog-filter {
   display: flex;
-  min-height: 160px;
 }
 
 .breadcrumbs {
@@ -969,7 +968,6 @@ input[type="range"]::-moz-range-thumb {
   background-position: center;
 }
 
-/* Тест вариация стилизации чекбоксов */
 .control {
   position: relative;
   display: block;
@@ -979,6 +977,7 @@ input[type="range"]::-moz-range-thumb {
 .control-mark {
   position: absolute;
   left: 0;
+  top: 1.5px;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
@@ -1005,4 +1004,26 @@ input[type="range"]::-moz-range-thumb {
   background: url("../images/icons/check-mark.svg");
   background-repeat: no-repeat;
   background-position: left 4px top 5px;
+}
+
+.control-mark-radio {
+  position: absolute;
+  left: 0;
+  top: 1.5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.control-input-radio:checked + .control-mark-radio::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
