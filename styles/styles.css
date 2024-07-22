@@ -330,10 +330,6 @@ legend {
   margin-right: 70px;
 }
 
-.control {
-  line-height: 23px;
-}
-
 .results h2 {
   line-height: 36px;
   font-weight: 700;
@@ -971,4 +967,42 @@ input[type="range"]::-moz-range-thumb {
   background: url("../images/icons/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Тест вариация стилизации чекбоксов */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-label {
+  line-height: 23px;
+}
+
+.control:hover .control-mark{
+  /*наведение*/
+}
+
+.control-input:disabled + .control-mark {
+
+}
+
+.control-input:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  background: url("../images/icons/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: left 4px top 5px;
 }
