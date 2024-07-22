@@ -41,12 +41,13 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
   background-color: #F2F2F2;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 21px;
   min-height: 100%;
   color: #000000;
   font-size: 18px;
-  display: flex;
   margin: 0;
 }
 
@@ -90,6 +91,11 @@ p {
   margin: 0;
 }
 
+legend {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -127,7 +133,9 @@ p {
 }
 
 .logo {
-  margin-right: 30px;
+  margin-top: 5px; /*вопрос потом, почему без маргина пикча сверху съедается */
+  display: block;
+  margin-right: 28px;
 }
 
 .preview-background {
@@ -151,6 +159,7 @@ p {
 }
 
 .greeting p {
+  display: inline-block;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -158,7 +167,10 @@ p {
 }
 
 .greeting {
-  margin-bottom: 69px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .greeting-2 {
@@ -176,12 +188,6 @@ p {
   justify-content: space-between;
 }
 
-.blog-article h3 {
-  line-height: 28px;
-  font-weight: 700;
-  font-size: 24px;
-}
-
 .advantages-item h3 {
   line-height: 28px;
   font-weight: 700;
@@ -189,6 +195,20 @@ p {
   margin-bottom: 62px;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+  padding-bottom: 32px;
+  margin-bottom: 30px;
+}
+
+.advantages-item h3:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 85px;
+  right: 85px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item p {
@@ -274,7 +294,6 @@ p {
   margin-bottom: 50px;
 }
 
-/*Вопрос, как стилизовать под нужную высоту, ибо предустановлены отступы заранее*/
 .filter-selection {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
@@ -282,8 +301,9 @@ p {
   color: #333333;
   border: 2px solid #E5E5E5;
   width: 292px;
+  padding: 10px 18px; /*10px тест вариация все из за тех же бордеров в хроме */
+  margin-right: 70px;
   height: 49px;
-  padding: 0px 20px;
 }
 
 .filter-content h1 {
@@ -308,10 +328,6 @@ p {
 
 .price-filter-wrapper {
   margin-right: 70px;
-}
-
-.control {
-  line-height: 23px;
 }
 
 .results h2 {
@@ -345,6 +361,7 @@ p {
 
 .stars-count {
   display: flex;
+  align-items: center;
 }
 
 .product-item b {
@@ -404,11 +421,7 @@ p {
 .navigation-list {
   display: flex;
   align-items: center;
-}
-
-.navigation-user {
-  max-width: 268px;
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation-logo {
@@ -428,14 +441,29 @@ p {
 }
 
 .blog-article-description h3 {
-  display: block;
-  margin-bottom: 62px;
   text-align: center;
   text-transform: uppercase;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 32px;
+  margin-bottom: 30px;
+}
+
+.blog-article-description h3:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 85px;
+  right: 85px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .blog-article-description p {
-  display: block;
   text-align: center;
 }
 
@@ -519,17 +547,18 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
 }
 
 .social-list {
   display: flex;
+  align-items: center;
 }
 
 .booking {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
-  display: inline-block;
 }
 
 /* Section filter-content */
@@ -542,11 +571,13 @@ fieldset {
 
 .catalog-filter {
   display: flex;
-  min-height: 160px;
 }
 
 .breadcrumbs {
+  display: flex;
   margin-bottom: 40px;
+  align-items: center;
+  gap: 10px;
 }
 
 .catalog-filter-list li {
@@ -727,7 +758,7 @@ input::-webkit-inner-spin-button {
   height: 4px;
   position: absolute;
   left: 0;
-  right: 10%;
+  right: 25%;
   background-color: #ffffff;
 }
 
@@ -763,4 +794,236 @@ input[type="range"]::-moz-range-thumb {
   border: none;
   border-radius: 25%;
   pointer-events: auto;
+}
+
+.navigation-link-current{
+  text-decoration: underline;
+  text-decoration-color: #756257;
+  text-underline-offset: 19px;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+
+.search-icon-nav {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0.5px right 0.5px;
+  margin-right: 24px;
+}
+
+.card-icon-nav {
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url("../images/icons/card.svg");
+  background-repeat: no-repeat;
+  margin-right: 32px;
+}
+
+.navigation-user li:first-child,
+.navigation-user li:nth-child(2) {
+  padding: 22px 12px;
+}
+
+.navigation-user li:nth-child(2) {
+  margin-right: 20px;
+}
+
+.card-counts {
+  position: absolute;
+  top: -11px;
+  right: -8px;
+  height: 10px;
+  padding: 5px 5px 5px 4px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  display: flex;
+}
+
+.card-counts-number {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+}
+
+.social-button-vk {
+  display: block;
+  height: 14px;
+  width: 24px;
+  background: url("../images/icons/social-icon-vk.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-tg {
+  display: block;
+  height: 16px;
+  width: 18px;
+  background: url("../images/icons/social-icon-tg.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.social-button-yt {
+  display: block;
+  height: 17px;
+  width: 22px;
+  background: url("../images/icons/social-icon-yt.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-vk-wrapper {
+  padding: 13px 11.67px;
+}
+
+.social-button-tg-wrapper {
+  padding: 12px 14.67px;
+}
+
+.social-button-yt-wrapper {
+  padding: 11.5px 12.67px;
+}
+
+.footer-logo-copyright {
+  display: block;
+  height: 33px;
+  width: 115px;
+  background: url("../images/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+}
+
+.layout-list {
+  display: flex;
+  gap: 8px;
+}
+
+.view-icon-catalog {
+  display: block;
+  height: 14px;
+  width: 16px;
+  padding: 15px 14px;
+  border: 2px solid #E5E5E5; /*разобраться потом с хромом, почему от масштабирования ставится 1.6 пикселей */
+  border-radius: 4px;
+}
+
+.layout-item-grids {
+  background: url("../images/icons/view-icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-extensive {
+  background: url("../images/icons/view-icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-linearly {
+  background: url("../images/icons/view-icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout-item-current {
+  border: 2px solid #000000;
+}
+
+.desired {
+  background-color: #7DB54F;
+  padding: 8px 18px;
+}
+
+.stars-count li {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url("../images/icons/star-icon.svg");
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}
+
+.stars-count li:last-child {
+  margin-right: 0px;
+}
+
+.breadcrumbs-home {
+  display: block;
+  width: 12px;
+  height: 15px;
+  background: url("../images/icons/breadcrumbs-home-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.breadcrumbs-arrow {
+  display: block;
+  width: 8px;
+  height: 20px;
+  background: url("../images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 1.5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-label {
+  line-height: 23px;
+}
+
+.control:hover .control-mark{
+  /*наведение*/
+}
+
+.control-input:disabled + .control-mark {
+
+}
+
+.control-input:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  background: url("../images/icons/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: left 4px top 5px;
+}
+
+.control-mark-radio {
+  position: absolute;
+  left: 0;
+  top: 1.5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.control-input-radio:checked + .control-mark-radio::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
