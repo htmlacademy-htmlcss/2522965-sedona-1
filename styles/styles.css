@@ -631,13 +631,12 @@ fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
   border-bottom: 1px solid #E6E6E6;
 }
 
-/*разобраться потом: "почему ширина 341px при width: 300px", с одной стороны из за бордера, но почему не 342 пикселя */
 .product-item {
-  padding: 20px;
+  padding: 19px;
   border: 1px solid #E6E6E6;
   display: grid;
   grid-template-columns: 1fr 1fr;
