@@ -119,7 +119,7 @@ legend {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0px  0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px  0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navigation-link {
@@ -287,11 +287,17 @@ legend {
 
 .filter-content {
   background-image: url(../images/blur-catalog-header.jpg);
-  min-height: 412px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   color: #ffffff;
   margin-bottom: 50px;
+}
+
+.filter-selection-wrapper {
+  display: flex;
+  width: 292px;
+  align-items: center;
+  margin-right: 70px;
 }
 
 .filter-selection {
@@ -300,10 +306,13 @@ legend {
   font-size: 18px;
   color: #333333;
   border: 2px solid #E5E5E5;
-  width: 292px;
-  padding: 10px 18px; /*10px тест вариация все из за тех же бордеров в хроме */
-  margin-right: 70px;
-  height: 49px;
+  padding: 12px 18px; /*12px тест вариация все из за тех же бордеров в хроме */
+  padding-right: 52px;
+  flex-grow: 1;
+  background-image: url("../images/icons/filter-down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
 }
 
 .filter-content h1 {
@@ -631,13 +640,12 @@ fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
   border-bottom: 1px solid #E6E6E6;
 }
 
-/*разобраться потом: "почему ширина 341px при width: 300px", с одной стороны из за бордера, но почему не 342 пикселя */
 .product-item {
-  padding: 20px;
+  padding: 19px;
   border: 1px solid #E6E6E6;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -715,6 +723,25 @@ fieldset {
   font-weight: 700;
   background-color: #F2F2F2;
   -moz-appearance: textfield;
+}
+
+.input-min:hover,
+.input-max:hover {
+  background-color: #E6E6E6;
+  cursor: default;
+}
+
+
+.input-min:focus,
+.input-max:focus {
+  outline: none;
+  border: 2px solid #000000; /*решить потом проблему с изменением блока, бокс сайзинг бордер бокс не валиден из за игнорирования паддингов, из вариантов оформить через тень, но не костыль ли это?*/
+}
+
+.input-min:active,
+.input-max:active {
+  outline: none;
+  border: 2px solid #000000;
 }
 
 .input-min {
@@ -937,6 +964,10 @@ input[type="range"]::-moz-range-thumb {
   padding: 8px 18px;
 }
 
+.breadcrumbs-item-current a {
+  color: #ffffff;
+}
+
 .stars-count li {
   display: block;
   width: 18px;
@@ -974,6 +1005,14 @@ input[type="range"]::-moz-range-thumb {
   padding-left: 36px;
 }
 
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
 .control-mark {
   position: absolute;
   left: 0;
@@ -989,11 +1028,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .control:hover .control-mark{
-  /*наведение*/
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.control-input:disabled + .control-mark {
-
+.control-input:active + .control-mark {
+  box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1); /*пример бордера через тень, можно ли так? Плюсом вопрос про активность. Бордер появляется только при нажатии, или пока чекбокс выбран?.*/
 }
 
 .control-input:checked + .control-mark::before {
@@ -1027,3 +1066,124 @@ input[type="range"]::-moz-range-thumb {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Интерактив кнопок */
+
+.booking:hover,
+.registration:hover,
+.description-card-button:hover {
+  background-color: #615048;
+}
+
+.booking:active,
+.registration:active,
+.description-card-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.booking:focus-visible,
+.registration:focus-visible,
+.description-card-button:focus-visible {
+  background-color: #615048;
+}
+
+.newsletter-button:hover,
+.filter-button:hover,
+.to-favorites-button:hover,
+.switch-button:hover {
+  background-color: #68A2CA;
+}
+
+.newsletter-button:active,
+.filter-button:active,
+.to-favorites-button:active,
+.switch-button:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-button:focus-visible,
+.filter-button:focus-visible,
+.to-favorites-button:focus-visible
+.switch-button:focus-visible {
+  background-color: #68A2CA;
+}
+
+.desired:hover {
+  background-color: #6C9E42;
+}
+
+.desired:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.desired:focus-visible {
+  background-color: #6C9E42;
+}
+
+.booking:disabled,
+.registration:disabled,
+.description-card-button:disabled,
+.newsletter-button:disabled,
+.filter-button:disabled,
+.to-favorites-button:disabled,
+.desired:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF
+}
+
+.switch-button-current:hover,
+.switch-button-current:active,
+.switch-button-current:focus-visible {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pages-count:hover,
+.pages-count:active,
+.pages-count:focus-visible {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.reset-button:hover {
+  opacity: 0.6;
+}
+
+.reset-button:active {
+  opacity: 0.3;
+}
+
+.reset-button:disabled {
+  opacity: 0.1;
+}
+
+.breadcrumbs-item-current:hover,
+.breadcrumbs-home:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-item-current:active,
+.breadcrumbs-home:active {
+  opacity: 0.3;
+}
+
+.view-icon-catalog:hover,
+.view-icon-catalog:active {
+  border: 2px solid #000000;
+}
+
+.filter-selection:hover {
+  border: 2px solid #68A2CA;
+}
+
+.filter-selection:active {
+  border: 2px solid #3F5E72;
+}
+
+.filter-selection:disabled {
+  opacity: 0.3;
+}
+
