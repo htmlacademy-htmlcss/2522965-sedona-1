@@ -91,11 +91,6 @@ p {
   margin: 0;
 }
 
-legend {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -333,10 +328,15 @@ legend {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 32px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .price-filter-wrapper {
+  border: none;
+  margin-left: 0;
   margin-right: 70px;
+  padding: 0;
 }
 
 .results h2 {
@@ -572,12 +572,6 @@ legend {
 
 /* Section filter-content */
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
 .catalog-filter {
   display: flex;
 }
@@ -595,6 +589,13 @@ fieldset {
 
 .catalog-filter-list li:last-child {
   margin-bottom: 0px;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 .catalog-filter-group:first-child {
