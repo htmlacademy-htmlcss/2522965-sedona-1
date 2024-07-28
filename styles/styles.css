@@ -200,7 +200,7 @@ legend {
   margin-bottom: 30px;
 }
 
-.advantages-item h3:before {
+.advantages-item h3::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -461,7 +461,7 @@ legend {
   margin-bottom: 30px;
 }
 
-.blog-article-description h3:before {
+.blog-article-description h3::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -1035,7 +1035,7 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1); /*пример бордера через тень, можно ли так? Плюсом вопрос про активность. Бордер появляется только при нажатии, или пока чекбокс выбран?.*/
 }
 
-.control-input:checked + .control-mark::before {
+.control-input:checked + .control-mark:::before {
   content: "";
   position: absolute;
   width: 20px;
