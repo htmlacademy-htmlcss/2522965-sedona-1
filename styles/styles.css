@@ -69,23 +69,6 @@ a {
   text-decoration: none;
 }
 
-/*
-.page-footer ul,
-.navigation ul,
-.page-main ul,
-.filter-content-components-wrapper ul,
-.catalog-filter-group ul,
-.results ul,
-.product-cards-list ul,
-.product-cards ul,
-.product-item ul {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-*/
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -123,19 +106,19 @@ a {
 }
 
 .logo {
-  margin-top: 5px; /*вопрос потом, почему без маргина пикча сверху съедается */
   display: block;
   margin-right: 28px;
+  align-self: flex-start;
 }
 
 .preview-background {
   overflow: hidden;
   background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: contain, contain;
+  background-size: cover, cover;
   background-position: bottom, top;
   text-align: center;
-  height: 485px;
+  min-height: 485px;
   margin-bottom: 69px;
 }
 
@@ -164,6 +147,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .greeting-2 {
@@ -232,7 +217,7 @@ a {
 
 .advantages-item {
   background: rgba(131, 179, 211, 0.12);
-  padding: 112.5px 85px;
+  padding: 112px 85px;
 }
 
 .advantages-item-background {
@@ -506,10 +491,6 @@ a {
 .advantages {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
 }
 
 .blog-article-2 {
@@ -521,6 +502,7 @@ a {
 .advantages-item-icons {
   background: #ffffff;
   padding: 81px 85px;
+  padding-top: 183px;
 }
 
 .advantages-item-icons-background {
@@ -544,29 +526,22 @@ a {
   margin-bottom: 0;
 }
 
-.advantages-description-wrapper {
-  padding-top: 102px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .advantage-icon-habitation {
   background-image: url("../images/icons/advantage-icon-1.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .advantage-icon-food {
   background-image: url("../images/icons/advantage-icon-2.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .advantage-icon-present {
   background-image: url("../images/icons/advantage-icon-3.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .suggestion {
@@ -698,7 +673,7 @@ a {
   padding: 19px;
   border: 1px solid #E6E6E6;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 16px;
   width: 300px;
