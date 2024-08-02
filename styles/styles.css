@@ -686,6 +686,8 @@ a {
 
 .page-switch {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   margin-bottom: 60px;
   padding: 0px 70px;
 }
@@ -732,7 +734,6 @@ a {
 
 .form-text {
   position: relative;
-  width: 143px;
 }
 
 .form-text,
@@ -747,8 +748,7 @@ a {
 .input-min,
 .input-max {
   padding: 12px 37px 12px 20px;
-  width: 86px; /*143*/
-  height: 24px; /*48*/
+  max-width: 86px; /*143*/
   font-weight: 700;
   background-color: #F2F2F2;
   -moz-appearance: textfield;
