@@ -103,7 +103,7 @@
         <section class="suggestion">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="button registration" href="#">Поиск гостиницы в Седоне</a>
+          <button id="modal-open-button" class="button registration">Поиск гостиницы в Седоне</button>
         </section>
         <section class="newsletter">
           <h2>Подпишитесь на рассылку</h2>
@@ -136,7 +136,63 @@
         <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer-logo-copyright" href="https://htmlacademy.ru/"></a>
       </footer>
+
+      <div class="modal" id="registration-modal">
+        <section class="modal-content">
+          <h2>поиск гостиницы в седоне</h2>
+          <button class="close-modal">
+            <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.49 1.783 13.199.49 7.49 6.198 1.783.491.49 1.783 6.198 7.49.49 13.198l1.293 1.293L7.49 8.783l5.708 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z" fill="#000"/>
+            </svg>
+          </button>
+          <form class="modal-filter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="date-arrival" class="date-title">дата заезда:</label>
+            <input id="date-arrival" class="date-input" type="date">
+            <label for="date-departure" class="date-title">дата выезда:</label>
+            <input id="date-departure" class="date-input" type="date">
+            <label for="adults-number" class="date-title">взрослые:</label>
+            <div class="guests-number-wrapper">
+              <div class="container">
+                <button class="minus" id="decrement" onclick="stepper(this)">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3"/>
+                  </svg>
+                </button>
+                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2">
+                <button id="increment">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3"/>
+                  </svg>
+                </button>
+              </div>
+
+               <label for="child-number" class="date-title child-title">Дети:</label>
+               <div class="circle-information">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff"/>
+                  </svg>
+               </div>
+               <div class="container">
+                <button class="minus" id="decrement">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3"/>
+                  </svg>
+                </button>
+                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2">
+                <button id="increment" onclick="stepper(this)">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button class="submit-registration button" type="submit">найти</button>
+          </form>
+        </section>
+      </div>
     </div>
+
+    <script defer src="js/script.js"></script>
   </body>
 
 </html>

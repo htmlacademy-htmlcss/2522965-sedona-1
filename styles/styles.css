@@ -796,8 +796,8 @@ a {
   margin-bottom: 44px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.form-text input::-webkit-outer-spin-button,
+.form-text input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
@@ -1220,3 +1220,171 @@ input::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
+/* тест вариация модального окна */
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(242, 242, 242, 0.8);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .6s, opacity .6s;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  /*min-width: 717px;*/
+  padding: 64px 70px;
+  z-index: 1;
+  margin: 15px 15px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  transform: scale(0);
+  transition: transform .6s;
+  position: relative;
+  min-width: 577px;
+}
+
+.modal.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.visible .modal-content {
+  transform: scale(1);
+}
+
+.close-modal {
+  display: inline-block;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.date-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.date-input {
+  flex-grow: 1;
+  background-color: #F2F2F2;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.modal-filter-form {
+  display: grid;
+  grid-template-columns: 137px auto;
+  row-gap: 48px;
+}
+
+.guests-number-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.container:not(:last-child) {
+  margin-right: auto;
+}
+
+.number-input {
+  -moz-appearance: textfield;
+  text-align: center;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: inherit;
+  color: #000000;
+  border: 0;
+  font-weight: 700;
+  padding: 0;
+  max-width: 31px !important; /*test */
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container button {
+  background-color: #F2F2F2;
+  padding: 14px 10px;
+  border: none;
+  max-height: 48px; /* потом вопрос, откуда доп. пространство в кнопке без уточнения высоты */
+  cursor: pointer;
+}
+
+#decrement {
+  border-radius: 4px 0 0 4px;
+}
+
+#increment {
+  border-radius: 0 4px 4px 0;
+}
+
+.child-title {
+  margin-right: 10px;
+}
+
+.circle-information {
+  padding: 3px;
+  height: 26px;
+  width: 26px;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 46px;
+}
+
+.submit-registration {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #83B3D3;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
