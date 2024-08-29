@@ -9,6 +9,3 @@ registrationButton.onclick = function() {
 closeModalButton.onclick = function() {
   modal.classList.remove("visible");
 };
-
-
-
