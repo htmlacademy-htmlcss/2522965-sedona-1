@@ -69,33 +69,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h3 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-legend {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -133,19 +106,19 @@ legend {
 }
 
 .logo {
-  margin-top: 5px; /*вопрос потом, почему без маргина пикча сверху съедается */
   display: block;
   margin-right: 28px;
+  align-self: flex-start;
 }
 
 .preview-background {
   overflow: hidden;
   background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: contain, contain;
+  background-size: cover, cover;
   background-position: bottom, top;
   text-align: center;
-  height: 485px;
+  min-height: 485px;
   margin-bottom: 69px;
 }
 
@@ -153,6 +126,7 @@ legend {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  margin-top: 0;
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -164,6 +138,8 @@ legend {
   font-size: 22px;
   color: #333333;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .greeting {
@@ -171,6 +147,8 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .greeting-2 {
@@ -178,6 +156,7 @@ legend {
 }
 
 .greeting-2 h2 {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -198,9 +177,10 @@ legend {
   position: relative;
   padding-bottom: 32px;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
-.advantages-item h3:before {
+.advantages-item h3::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -214,12 +194,15 @@ legend {
 .advantages-item p {
   color: #333333;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .suggestion h2 {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -228,12 +211,13 @@ legend {
   line-height: 26px;
   font-size: 22px;
   color: #333333;
+  margin-top: 0;
   margin-bottom: 54px;
 }
 
 .advantages-item {
   background: rgba(131, 179, 211, 0.12);
-  padding: 112.5px 85px;
+  padding: 112px 85px;
 }
 
 .advantages-item-background {
@@ -254,6 +238,7 @@ legend {
   color: #ffffff;
   font-size: 30px;
   text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -268,6 +253,7 @@ legend {
   line-height: 26px;
   color: #ffffff;
   font-size: 22px;
+  margin-top: 0;
   margin-bottom: 54px;
 }
 
@@ -315,13 +301,14 @@ legend {
   appearance: none;
 }
 
-.filter-content h1 {
+.filter-content-components-wrapper h1 {
   line-height: 78px;
   font-weight: 700;
   font-size: 60px;
   margin-bottom: 8px;
+  margin-top: 0;
 }
-*
+
 .breadcrumbs li {
   line-height: 21px;
   font-size: 16px;
@@ -333,16 +320,23 @@ legend {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 32px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .price-filter-wrapper {
+  border: none;
+  margin-left: 0;
   margin-right: 70px;
+  padding: 0;
 }
 
 .results h2 {
   line-height: 36px;
   font-weight: 700;
   font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
   text-transform: uppercase;
   margin-right: auto;
 }
@@ -350,6 +344,8 @@ legend {
 .product-card-link h3 {
   line-height: 28px;
   font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .product-card-image {
@@ -371,11 +367,20 @@ legend {
 .stars-count {
   display: flex;
   align-items: center;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .product-item b {
   font-weight: 400;
   text-align: right;
+}
+
+.product-item p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .description-card-button {
@@ -430,6 +435,10 @@ legend {
 .navigation-list {
   display: flex;
   align-items: center;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   margin-right: auto;
 }
 
@@ -459,9 +468,10 @@ legend {
   position: relative;
   padding-bottom: 32px;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
-.blog-article-description h3:before {
+.blog-article-description h3::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -474,11 +484,13 @@ legend {
 
 .blog-article-description p {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .advantages {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .blog-article-2 {
@@ -490,6 +502,7 @@ legend {
 .advantages-item-icons {
   background: #ffffff;
   padding: 81px 85px;
+  padding-top: 183px;
 }
 
 .advantages-item-icons-background {
@@ -500,6 +513,7 @@ legend {
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
+  margin-top: 0;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -508,31 +522,26 @@ legend {
 .advantages-item-icons p {
   color: #333333;
   text-align: center;
-}
-
-.advantages-description-wrapper {
-  padding-top: 102px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .advantage-icon-habitation {
   background-image: url("../images/icons/advantage-icon-1.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .advantage-icon-food {
   background-image: url("../images/icons/advantage-icon-2.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .advantage-icon-present {
   background-image: url("../images/icons/advantage-icon-3.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top 81px;
 }
 
 .suggestion {
@@ -562,6 +571,10 @@ legend {
 .social-list {
   display: flex;
   align-items: center;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .booking {
@@ -572,21 +585,18 @@ legend {
 
 /* Section filter-content */
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
 .catalog-filter {
   display: flex;
 }
 
 .breadcrumbs {
   display: flex;
-  margin-bottom: 40px;
   align-items: center;
   gap: 10px;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding-left: 0;
 }
 
 .catalog-filter-list li {
@@ -595,6 +605,13 @@ fieldset {
 
 .catalog-filter-list li:last-child {
   margin-bottom: 0px;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 .catalog-filter-group:first-child {
@@ -606,7 +623,11 @@ fieldset {
 }
 
 .catalog-filter-list {
-  width: 150.43px;
+  min-width: 150px;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .filter-content-components-wrapper {
@@ -638,17 +659,21 @@ fieldset {
 
 .product-cards-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding-bottom: 39px;
   border-bottom: 1px solid #E6E6E6;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .product-item {
   padding: 19px;
   border: 1px solid #E6E6E6;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 16px;
   width: 300px;
@@ -661,6 +686,8 @@ fieldset {
 
 .page-switch {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   margin-bottom: 60px;
   padding: 0px 70px;
 }
@@ -672,6 +699,8 @@ fieldset {
 
 .pages-count {
   color: #000000;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: #ffffff;
 }
 
@@ -687,6 +716,7 @@ fieldset {
   color: #000000;
   font-size: 30px;
   text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -694,6 +724,7 @@ fieldset {
   line-height: 26px;
   color: #333333;
   font-size: 22px;
+  margin-top: 0;
   margin-bottom: 54px;
 }
 
@@ -703,7 +734,6 @@ fieldset {
 
 .form-text {
   position: relative;
-  width: 143px;
 }
 
 .form-text,
@@ -718,8 +748,7 @@ fieldset {
 .input-min,
 .input-max {
   padding: 12px 37px 12px 20px;
-  width: 86px; /*143*/
-  height: 24px; /*48*/
+  max-width: 86px; /*143*/
   font-weight: 700;
   background-color: #F2F2F2;
   -moz-appearance: textfield;
@@ -767,8 +796,8 @@ fieldset {
   margin-bottom: 44px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.form-text input::-webkit-outer-spin-button,
+.form-text input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
@@ -804,7 +833,7 @@ input::-webkit-inner-spin-button {
   margin-left: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.range-input input::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   -webkit-appearance: none;
@@ -813,7 +842,7 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: auto;
 }
 
-input[type="range"]::-moz-range-thumb {
+.range-input input::-moz-range-thumb {
   height: 20px;
   width: 20px;
   -moz-appearance: none;
@@ -926,6 +955,10 @@ input[type="range"]::-moz-range-thumb {
 .layout-list {
   display: flex;
   gap: 8px;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .view-icon-catalog {
@@ -1187,3 +1220,209 @@ input[type="range"]::-moz-range-thumb {
   opacity: 0.3;
 }
 
+/* тест вариация модального окна */
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(242, 242, 242, 0.8);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .6s, opacity .6s;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  /*min-width: 717px;*/
+  padding: 64px 70px;
+  z-index: 1;
+  margin: 15px 15px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  transform: scale(0);
+  transition: transform .6s;
+  position: relative;
+  min-width: 577px;
+}
+
+.modal.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.visible .modal-content {
+  transform: scale(1);
+}
+
+.close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.date-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.date-input {
+  flex-grow: 1;
+  background-color: #F2F2F2;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.modal-filter-form {
+  display: grid;
+  grid-template-columns: 137px auto;
+  row-gap: 48px;
+}
+
+.guests-number-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.container:not(:last-child) {
+  margin-right: auto;
+}
+
+.number-input {
+  -moz-appearance: textfield;
+  text-align: center;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: inherit;
+  color: #000000;
+  border: 0;
+  font-weight: 700;
+  padding: 0;
+  max-width: 31px; /*test */
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container button {
+  background-color: #F2F2F2;
+  padding: 14px 10px;
+  border: none;
+  max-height: 48px; /* потом вопрос, откуда доп. пространство в кнопке без уточнения высоты */
+  cursor: pointer;
+}
+
+#decrement {
+  border-radius: 4px 0 0 4px;
+}
+
+#increment {
+  border-radius: 0 4px 4px 0;
+}
+
+.child-title {
+  margin-right: 10px;
+}
+
+.tooltip {
+  padding: 3px;
+  height: 26px;
+  width: 26px;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 46px;
+  display: inline-block;
+  position: relative;
+}
+
+.submit-registration {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #83B3D3;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+/* tooltip test version*/
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 216px; /*256*/
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 5;
+  top: 150%;
+  left: 50%;
+  margin-left: -128px;
+  padding: 15px 18px 18px 22px;
+  box-shadow: 0px  15px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333333 transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}

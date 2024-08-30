@@ -115,12 +115,12 @@
                 <legend>Стоимость, ₽:</legend>
                 <div class="form-text-wrapper">
                   <div class="form-text">
-                    <input id="filter-form" type="number" name="filter-min" class="input-min" value="0">
-                    <label class="static-value">от</label>
+                    <input id="filter-form-min" type="number" name="filter-min" class="input-min" value="0">
+                    <label for="filter-form-min" class="static-value">от</label>
                   </div>
                   <div class="form-text">
-                    <input id="filter-form" type="number" name="filter-max" class="input-max" value="9000">
-                    <label class="static-value">до</label>
+                    <input id="filter-form-max" type="number" name="filter-max" class="input-max" value="9000">
+                    <label for="filter-form-max" class="static-value">до</label>
                   </div>
                 </div>
                 <div class="slider">
@@ -180,6 +180,7 @@
               <b>От 4000 ₽</b>
               <a class="button description-card-button" href="#">Подробнее</a>
               <a class="button description-card-button to-favorites-button" href="#">В избранное</a>
+              <h4 class="visually-hidden">Четырёхзвездочая гостиница</h4>
               <ul class="stars-count">
                 <li></li>
                 <li></li>
@@ -199,6 +200,7 @@
               <b>От 5000 ₽</b>
               <a class="button description-card-button" href="#">Подробнее</a>
               <a class="button description-card-button to-favorites-button desired" href="#">В избранном</a>
+              <h4 class="visually-hidden">Четырёхзвездочая гостиница</h4>
               <ul class="stars-count">
                 <li></li>
                 <li></li>
@@ -218,6 +220,7 @@
               <b>От 2500 ₽</b>
               <a class="button description-card-button" href="#">Подробнее</a>
               <a class="button description-card-button to-favorites-button" href="#">В избранное</a>
+              <h4 class="visually-hidden">Трёхзвездочая гостиница</h4>
               <ul class="stars-count">
                 <li></li>
                 <li></li>
@@ -236,6 +239,7 @@
               <b>От 1500 ₽</b>
               <a class="button description-card-button" href="#">Подробнее</a>
               <a class="button description-card-button to-favorites-button" href="#">В избранное</a>
+              <h4 class="visually-hidden">Двухзвёздочная гостиница</h4>
               <ul class="stars-count">
                 <li></li>
                 <li></li>
@@ -246,20 +250,15 @@
         </section>
         <section class="page-switch">
           <a class="switch-button switch-button-current">1</a>
-
           <a class="switch-button" href="#">2</a>
-
           <a class="switch-button" href="#">3</a>
-
           <a class="switch-button" href="#">4</a>
-
           <p class="switch-button pages-count">...</p>
-
           <a class="switch-button" href="#">10</a>
         </section>
         <section class="newsletter-catalog">
-          <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-          <p class="newsletter-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
             <button class="button newsletter-button" type="submit">Подписаться</button>
@@ -289,5 +288,7 @@
         <a class="footer-logo-copyright" href="https://htmlacademy.ru/"></a>
       </footer>
     </div>
+
+    <script defer src="js/slider.js"></script>
   </body>
 </html>
