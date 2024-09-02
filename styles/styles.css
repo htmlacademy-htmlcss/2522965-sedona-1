@@ -275,6 +275,7 @@ a {
 .footer-contacts-address-phone {
   line-height: 40px;
   font-size: 40px;
+  color: #000000;
 }
 
 .filter-content {
@@ -357,8 +358,6 @@ a {
 .product-card-image {
   display: block;
 }
-
-/*потом разобраться почему разница в 2 пикселя от высоты в макете*/
 
 .product-card-link-image {
   grid-column-start: 1;
@@ -770,13 +769,15 @@ a {
 .input-min:focus,
 .input-max:focus {
   outline: none;
-  border: 2px solid #000000; /*решить потом проблему с изменением блока, бокс сайзинг бордер бокс не валиден из за игнорирования паддингов, из вариантов оформить через тень, но не костыль ли это?*/
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
 .input-min:active,
 .input-max:active {
   outline: none;
-  border: 2px solid #000000;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
 .input-min {
@@ -793,7 +794,7 @@ a {
   position: absolute;
   right: 20px;
   top: 12px;
-  color: #d7d7d7; /*тест цвет, настоящий в фигме не нашел*/
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .form-text-wrapper {
@@ -804,9 +805,8 @@ a {
 
 .form-text input::-webkit-outer-spin-button,
 .form-text input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
 }
 
 .slider {
@@ -919,6 +919,7 @@ a {
   width: 24px;
   background: url("../images/icons/social-icon-vk.svg");
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .social-button-tg {
@@ -928,6 +929,7 @@ a {
   background: url("../images/icons/social-icon-tg.svg");
   background-repeat: no-repeat;
   background-position: top;
+  opacity: 0.8;
 }
 
 .social-button-yt {
@@ -936,6 +938,7 @@ a {
   width: 22px;
   background: url("../images/icons/social-icon-yt.svg");
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .social-button-vk-wrapper {
@@ -954,8 +957,19 @@ a {
   display: block;
   height: 33px;
   width: 115px;
-  background: url("../images/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
+}
+
+.footer-logo-copyright svg {
+  color: #000000;
+}
+
+.footer-logo-copyright svg:hover {
+  color: #756157;
+}
+
+.footer-logo-copyright svg:active {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .layout-list {
@@ -972,7 +986,7 @@ a {
   height: 14px;
   width: 16px;
   padding: 15px 14px;
-  border: 2px solid #E5E5E5; /*разобраться потом с хромом, почему от масштабирования ставится 1.6 пикселей */
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
 
@@ -1071,7 +1085,7 @@ a {
 }
 
 .control-input:active + .control-mark {
-  box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1); /*пример бордера через тень, можно ли так? Плюсом вопрос про активность. Бордер появляется только при нажатии, или пока чекбокс выбран?.*/
+  box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1);
 }
 
 .control-input:checked + .control-mark::before {
@@ -1112,6 +1126,27 @@ a {
 .registration:hover,
 .description-card-button:hover {
   background-color: #615048;
+}
+
+.social-button-vk:hover,
+.social-button-tg:hover,
+.social-button-yt:hover {
+  opacity: 1;
+}
+
+.social-button-vk:active,
+.social-button-tg:active,
+.social-button-yt:active {
+  opacity: 0.3;
+}
+
+.footer-contacts-address-phone:hover {
+  color: #756157;
+}
+
+.footer-contacts-address-phone:active {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .booking:active,
