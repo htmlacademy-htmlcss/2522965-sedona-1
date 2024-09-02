@@ -151,6 +151,7 @@ a {
   width: 651px;
   margin-right: auto;
   margin-left: auto;
+  cursor: default;
 }
 
 .greeting-2 {
@@ -170,6 +171,7 @@ a {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
+  cursor: default;
 }
 
 .advantages-item h3 {
@@ -211,6 +213,7 @@ a {
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
+  cursor: default;
 }
 
 .suggestion p {
@@ -219,6 +222,7 @@ a {
   color: #333333;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .advantages-item {
@@ -246,6 +250,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .registration {
@@ -253,6 +258,7 @@ a {
   font-size: 20px;
   display: inline-block;
   padding: 8px 50px;
+  cursor: pointer;
 }
 
 .newsletter p {
@@ -261,6 +267,7 @@ a {
   font-size: 22px;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .newsletter-button {
@@ -270,6 +277,7 @@ a {
   font-size: 20px;
   padding: 8px 50px;
   border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
 }
 
 .footer-contacts-address-phone {
@@ -299,13 +307,14 @@ a {
   font-size: 18px;
   color: #333333;
   border: 2px solid #E5E5E5;
-  padding: 12px 18px; /*12px тест вариация все из за тех же бордеров в хроме */
+  padding: 12px 18px;
   padding-right: 52px;
   flex-grow: 1;
   background-image: url("../images/icons/filter-down-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
+  cursor: pointer;
 }
 
 .filter-content-components-wrapper h1 {
@@ -314,6 +323,7 @@ a {
   font-size: 60px;
   margin-bottom: 8px;
   margin-top: 0;
+  cursor: default;
 }
 
 .breadcrumbs li {
@@ -346,6 +356,7 @@ a {
   margin-bottom: 0;
   text-transform: uppercase;
   margin-right: auto;
+  cursor: default;
 }
 
 .product-card-link h3 {
@@ -381,11 +392,13 @@ a {
 .product-item b {
   font-weight: 400;
   text-align: right;
+  cursor: default;
 }
 
 .product-item p {
   margin-top: 0;
   margin-bottom: 0;
+  cursor: default;
 }
 
 .description-card-button {
@@ -496,6 +509,7 @@ a {
 .advantages {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  cursor: default;
 }
 
 .blog-article-2 {
@@ -643,6 +657,7 @@ a {
   margin-bottom: 32px;
   padding: 8px 50px;
   background-color: #82B3D3;
+  cursor: pointer;
 }
 
 .results-filter-button-wrapper {
@@ -652,6 +667,7 @@ a {
 .reset-button {
   background: transparent;
   padding: 8px 57.5px;
+  cursor: pointer;
 }
 
 .results {
@@ -700,6 +716,7 @@ a {
 .switch-button-current {
   background-color: #F2F2F2;
   color: #000000;
+  cursor: pointer;
 }
 
 .pages-count {
@@ -707,6 +724,7 @@ a {
   margin-top: 0;
   margin-bottom: 0;
   background-color: #ffffff;
+  cursor: default;
 }
 
 .newsletter-catalog {
@@ -723,6 +741,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .newsletter-catalog p {
@@ -731,6 +750,7 @@ a {
   font-size: 22px;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .newsletter-form {
@@ -762,7 +782,6 @@ a {
 .input-min:hover,
 .input-max:hover {
   background-color: #E6E6E6;
-  cursor: default;
 }
 
 
@@ -826,6 +845,7 @@ a {
 
 .range-input {
   position: relative;
+  cursor: pointer;
 }
 
 .range-input input {
@@ -846,6 +866,7 @@ a {
   background: #FFFFFF;
   border-radius: 25%;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .range-input input::-moz-range-thumb {
@@ -856,6 +877,7 @@ a {
   border: none;
   border-radius: 25%;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .navigation-link-current{
@@ -1078,6 +1100,7 @@ a {
 
 .control-label {
   line-height: 23px;
+  cursor: pointer;
 }
 
 .control:hover .control-mark{
