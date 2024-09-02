@@ -133,7 +133,6 @@ a {
 }
 
 .greeting p {
-  display: inline-block;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -149,10 +148,16 @@ a {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
+  width: 651px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .greeting-2 {
   margin-bottom: 64px;
+  width: 505px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .greeting-2 h2 {
@@ -171,23 +176,24 @@ a {
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 62px;
   text-align: center;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 32px;
   margin-bottom: 30px;
   margin-top: 0;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .advantages-item h3::before {
   content: "";
   position: absolute;
-  width: 60px;
+  width: 33%;
   height: 2px;
   bottom: 0;
-  left: 85px;
-  right: 85px;
+  left: 33%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -546,7 +552,7 @@ a {
 
 .suggestion {
   text-align: center;
-  padding: 96px 0px;
+  padding: 96px 304px;
 }
 
 .newsletter-text {
