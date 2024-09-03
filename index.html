@@ -153,19 +153,19 @@
           </button>
           <form class="modal-filter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="date-arrival" class="date-title">дата заезда:</label>
-            <input id="date-arrival" class="date-input" type="date">
+            <input id="date-arrival" class="date-input" type="date" name="date-of-arrival">
             <label for="date-departure" class="date-title">дата выезда:</label>
-            <input id="date-departure" class="date-input" type="date">
+            <input id="date-departure" class="date-input" type="date" name="date-of-departure">
             <label for="adults-number" class="date-title">взрослые:</label>
             <div class="guests-number-wrapper">
-              <div class="container">
-                <button class="minus" id="decrement" onclick="stepper(this)">
+              <div class="container" data-counter>
+                <button class="counter__button minus" id="decrement" type="button">
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
                   </svg>
                 </button>
-                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2">
-                <button class="plus" id="increment">
+                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2" name="adults-counter">
+                <button class="counter__button plus" id="increment" type="button">
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
                   </svg>
@@ -179,14 +179,14 @@
                 </svg>
                 <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                </div>
-               <div class="container">
-                <button class="minus" id="decrement">
+               <div class="container" data-counter>
+                <button class="counter__button minus" id="decrement" type="button">
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
                   </svg>
                 </button>
-                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2">
-                <button class="plus" id="increment" onclick="stepper(this)">
+                <input id="adults-number" class="number-input" type="number" min="0" max="100" step="1" value="2" name="child-counter">
+                <button class="counter__button plus" id="increment" type="button">
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
                   </svg>
