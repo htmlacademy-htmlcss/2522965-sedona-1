@@ -305,6 +305,7 @@ a {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
   font-size: 18px;
+  border-radius: 4px;
   color: #333333;
   border: 2px solid #E5E5E5;
   padding: 12px 18px;
@@ -1108,7 +1109,7 @@ a {
 }
 
 .control-input:active + .control-mark {
-  box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1);
+  box-shadow: 0px 0px 0px 2px rgba(131, 179, 211, 1);
 }
 
 .control-input:checked + .control-mark::before {
@@ -1144,6 +1145,40 @@ a {
 }
 
 /* Интерактив кнопок */
+
+.date-input:hover {
+  background-color: #E6E6E6;
+  color: #000000;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.minus:hover,
+.plus:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+.minus:active,
+.plus:active {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.close-modal:hover,
+.close-modal:active {
+  background-color: #E6E6E6;
+}
+
+.control-input:active + .control-mark {
+
+}
+
+.close-modal:active > svg{
+  opacity: 0.3;
+}
 
 .booking:hover,
 .registration:hover,
@@ -1188,14 +1223,16 @@ a {
 .newsletter-button:hover,
 .filter-button:hover,
 .to-favorites-button:hover,
-.switch-button:hover {
+.switch-button:hover,
+.submit-registration:hover {
   background-color: #68A2CA;
 }
 
 .newsletter-button:active,
 .filter-button:active,
 .to-favorites-button:active,
-.switch-button:active {
+.switch-button:active,
+.submit-registration:active {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1276,15 +1313,24 @@ a {
   border: 2px solid #68A2CA;
 }
 
-.filter-selection:active {
+.filter-selection:active,
+.filter-selection:focus {
   border: 2px solid #3F5E72;
 }
 
 .filter-selection:disabled {
+  border: 2px solid #000000;
   opacity: 0.3;
 }
 
 /* тест вариация модального окна */
+
+.minus,
+.plus {
+  color: #756157;
+  opacity: 0.3;
+}
+
 
 .modal {
   position: fixed;
@@ -1348,6 +1394,7 @@ a {
   line-height: 36px;
   margin-top: 0;
   margin-bottom: 64px;
+  cursor: default;
 }
 
 .date-title {
@@ -1356,6 +1403,7 @@ a {
   font-weight: 700;
   text-transform: capitalize;
   align-self: center;
+  color: #000000;
 }
 
 .date-input {
@@ -1368,6 +1416,13 @@ a {
   border: none;
   outline: none;
   border-radius: 4px;
+  cursor: text;
+  color: rgba(0,0,0,0.6);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .modal-filter-form {
@@ -1443,6 +1498,7 @@ a {
   margin-right: 46px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .submit-registration {
@@ -1455,6 +1511,7 @@ a {
   padding-bottom: 18px;
   text-transform: uppercase;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* tooltip test version*/
@@ -1489,4 +1546,8 @@ a {
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
+}
+
+.tooltip-text {
+  cursor: default;
 }
