@@ -30,8 +30,8 @@ if (counters) {
           value = 0;
         }
 
-        if (value >= 10) {
-          value = 10;
+        if (value >= 20) {
+          value = 20;
         }
 
         target.closest('.container').querySelector('input').value = value;
