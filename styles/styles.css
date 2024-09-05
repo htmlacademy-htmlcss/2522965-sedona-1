@@ -774,7 +774,7 @@ a {
 .input-min,
 .input-max {
   padding: 12px 37px 12px 20px;
-  max-width: 86px; /*143*/
+  max-width: 86px;
   font-weight: 700;
   background-color: #F2F2F2;
   -moz-appearance: textfield;
@@ -1144,7 +1144,11 @@ a {
   transform: translate(-50%, -50%);
 }
 
-/* Интерактив кнопок */
+/* Interactive buttons*/
+
+.newsletter-text:focus {
+  outline: none;
+}
 
 .date-input:hover {
   background-color: #E6E6E6;
@@ -1239,7 +1243,8 @@ input[type='date']::-webkit-calendar-picker-indicator:hover {
 .filter-button:hover,
 .to-favorites-button:hover,
 .switch-button:hover,
-.submit-registration:hover {
+.submit-registration:hover,
+.tooltip:hover {
   background-color: #68A2CA;
 }
 
@@ -1338,14 +1343,7 @@ input[type='date']::-webkit-calendar-picker-indicator:hover {
   opacity: 0.3;
 }
 
-/* тест вариация модального окна */
-
-.minus,
-.plus {
-  color: #756157;
-  opacity: 0.3;
-}
-
+/* Modal window */
 
 .modal {
   position: fixed;
@@ -1366,7 +1364,6 @@ input[type='date']::-webkit-calendar-picker-indicator:hover {
 
 .modal-content {
   background-color: #ffffff;
-  /*min-width: 717px;*/
   padding: 64px 70px;
   z-index: 1;
   margin: 15px 15px;
@@ -1453,13 +1450,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
   align-items: center;
 }
 
-.container {
+.container-counter {
   display: flex;
   background-color: #F2F2F2;
   border-radius: 4px;
 }
 
-.container:not(:last-child) {
+.container-counter:not(:last-child) {
   margin-right: auto;
 }
 
@@ -1474,7 +1471,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   border: 0;
   font-weight: 700;
   padding: 0;
-  max-width: 31px; /*test */
+  max-width: 31px;
 }
 
 .number-input::-webkit-inner-spin-button,
@@ -1483,20 +1480,28 @@ input[type='date']::-webkit-calendar-picker-indicator {
   margin: 0;
 }
 
-.container button {
+.container-counter button {
   background-color: #F2F2F2;
   padding: 14px 10px;
   border: none;
-  max-height: 48px; /* потом вопрос, откуда доп. пространство в кнопке без уточнения высоты */
+  max-height: 48px;
   cursor: pointer;
 }
 
-#decrement {
+#decrement-childs,
+#decrement-adults {
   border-radius: 4px 0 0 4px;
 }
 
-#increment {
+#increment-childs,
+#increment-adults {
   border-radius: 0 4px 4px 0;
+}
+
+.minus,
+.plus {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .child-title {
@@ -1529,11 +1534,11 @@ input[type='date']::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-/* tooltip test version*/
+/* Tooltip */
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  width: 216px; /*256*/
+  width: 216px;
   background-color: #333333;
   color: #FFFFFF;
   font-size: 16px;
@@ -1566,5 +1571,3 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .tooltip-text {
   cursor: default;
 }
-
-/*   */
