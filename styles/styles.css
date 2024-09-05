@@ -133,7 +133,6 @@ a {
 }
 
 .greeting p {
-  display: inline-block;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -149,10 +148,17 @@ a {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
+  width: 651px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: default;
 }
 
 .greeting-2 {
   margin-bottom: 64px;
+  width: 505px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .greeting-2 h2 {
@@ -165,29 +171,31 @@ a {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
+  cursor: default;
 }
 
 .advantages-item h3 {
   line-height: 28px;
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 62px;
   text-align: center;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 32px;
   margin-bottom: 30px;
   margin-top: 0;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .advantages-item h3::before {
   content: "";
   position: absolute;
-  width: 60px;
+  width: 33%;
   height: 2px;
   bottom: 0;
-  left: 85px;
-  right: 85px;
+  left: 33%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -205,6 +213,7 @@ a {
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
+  cursor: default;
 }
 
 .suggestion p {
@@ -213,6 +222,7 @@ a {
   color: #333333;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .advantages-item {
@@ -240,6 +250,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .registration {
@@ -247,6 +258,7 @@ a {
   font-size: 20px;
   display: inline-block;
   padding: 8px 50px;
+  cursor: pointer;
 }
 
 .newsletter p {
@@ -255,6 +267,7 @@ a {
   font-size: 22px;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .newsletter-button {
@@ -264,11 +277,13 @@ a {
   font-size: 20px;
   padding: 8px 50px;
   border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
 }
 
 .footer-contacts-address-phone {
   line-height: 40px;
   font-size: 40px;
+  color: #000000;
 }
 
 .filter-content {
@@ -290,15 +305,17 @@ a {
   font-family: "PT Sans", sans-serif;
   line-height: 21px;
   font-size: 18px;
+  border-radius: 4px;
   color: #333333;
   border: 2px solid #E5E5E5;
-  padding: 12px 18px; /*12px тест вариация все из за тех же бордеров в хроме */
+  padding: 12px 18px;
   padding-right: 52px;
   flex-grow: 1;
   background-image: url("../images/icons/filter-down-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
+  cursor: pointer;
 }
 
 .filter-content-components-wrapper h1 {
@@ -307,6 +324,7 @@ a {
   font-size: 60px;
   margin-bottom: 8px;
   margin-top: 0;
+  cursor: default;
 }
 
 .breadcrumbs li {
@@ -339,6 +357,7 @@ a {
   margin-bottom: 0;
   text-transform: uppercase;
   margin-right: auto;
+  cursor: default;
 }
 
 .product-card-link h3 {
@@ -351,8 +370,6 @@ a {
 .product-card-image {
   display: block;
 }
-
-/*потом разобраться почему разница в 2 пикселя от высоты в макете*/
 
 .product-card-link-image {
   grid-column-start: 1;
@@ -376,11 +393,13 @@ a {
 .product-item b {
   font-weight: 400;
   text-align: right;
+  cursor: default;
 }
 
 .product-item p {
   margin-top: 0;
   margin-bottom: 0;
+  cursor: default;
 }
 
 .description-card-button {
@@ -491,6 +510,7 @@ a {
 .advantages {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  cursor: default;
 }
 
 .blog-article-2 {
@@ -546,7 +566,7 @@ a {
 
 .suggestion {
   text-align: center;
-  padding: 96px 0px;
+  padding: 96px 304px;
 }
 
 .newsletter-text {
@@ -638,6 +658,7 @@ a {
   margin-bottom: 32px;
   padding: 8px 50px;
   background-color: #82B3D3;
+  cursor: pointer;
 }
 
 .results-filter-button-wrapper {
@@ -647,6 +668,7 @@ a {
 .reset-button {
   background: transparent;
   padding: 8px 57.5px;
+  cursor: pointer;
 }
 
 .results {
@@ -695,6 +717,7 @@ a {
 .switch-button-current {
   background-color: #F2F2F2;
   color: #000000;
+  cursor: pointer;
 }
 
 .pages-count {
@@ -702,6 +725,7 @@ a {
   margin-top: 0;
   margin-bottom: 0;
   background-color: #ffffff;
+  cursor: default;
 }
 
 .newsletter-catalog {
@@ -718,6 +742,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .newsletter-catalog p {
@@ -726,6 +751,7 @@ a {
   font-size: 22px;
   margin-top: 0;
   margin-bottom: 54px;
+  cursor: default;
 }
 
 .newsletter-form {
@@ -748,7 +774,7 @@ a {
 .input-min,
 .input-max {
   padding: 12px 37px 12px 20px;
-  max-width: 86px; /*143*/
+  max-width: 86px;
   font-weight: 700;
   background-color: #F2F2F2;
   -moz-appearance: textfield;
@@ -757,20 +783,21 @@ a {
 .input-min:hover,
 .input-max:hover {
   background-color: #E6E6E6;
-  cursor: default;
 }
 
 
 .input-min:focus,
 .input-max:focus {
   outline: none;
-  border: 2px solid #000000; /*решить потом проблему с изменением блока, бокс сайзинг бордер бокс не валиден из за игнорирования паддингов, из вариантов оформить через тень, но не костыль ли это?*/
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
 .input-min:active,
 .input-max:active {
   outline: none;
-  border: 2px solid #000000;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
 .input-min {
@@ -787,7 +814,7 @@ a {
   position: absolute;
   right: 20px;
   top: 12px;
-  color: #d7d7d7; /*тест цвет, настоящий в фигме не нашел*/
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .form-text-wrapper {
@@ -798,9 +825,8 @@ a {
 
 .form-text input::-webkit-outer-spin-button,
 .form-text input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
 }
 
 .slider {
@@ -820,6 +846,7 @@ a {
 
 .range-input {
   position: relative;
+  cursor: pointer;
 }
 
 .range-input input {
@@ -840,6 +867,7 @@ a {
   background: #FFFFFF;
   border-radius: 25%;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .range-input input::-moz-range-thumb {
@@ -850,6 +878,7 @@ a {
   border: none;
   border-radius: 25%;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .navigation-link-current{
@@ -913,6 +942,7 @@ a {
   width: 24px;
   background: url("../images/icons/social-icon-vk.svg");
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .social-button-tg {
@@ -922,6 +952,7 @@ a {
   background: url("../images/icons/social-icon-tg.svg");
   background-repeat: no-repeat;
   background-position: top;
+  opacity: 0.8;
 }
 
 .social-button-yt {
@@ -930,6 +961,7 @@ a {
   width: 22px;
   background: url("../images/icons/social-icon-yt.svg");
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .social-button-vk-wrapper {
@@ -948,8 +980,19 @@ a {
   display: block;
   height: 33px;
   width: 115px;
-  background: url("../images/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
+}
+
+.footer-logo-copyright svg {
+  color: #000000;
+}
+
+.footer-logo-copyright svg:hover {
+  color: #756157;
+}
+
+.footer-logo-copyright svg:active {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .layout-list {
@@ -966,7 +1009,7 @@ a {
   height: 14px;
   width: 16px;
   padding: 15px 14px;
-  border: 2px solid #E5E5E5; /*разобраться потом с хромом, почему от масштабирования ставится 1.6 пикселей */
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
 
@@ -1058,6 +1101,7 @@ a {
 
 .control-label {
   line-height: 23px;
+  cursor: pointer;
 }
 
 .control:hover .control-mark{
@@ -1065,7 +1109,7 @@ a {
 }
 
 .control-input:active + .control-mark {
-  box-shadow: inset 0px 0px 0px 2px rgba(131, 179, 211, 1); /*пример бордера через тень, можно ли так? Плюсом вопрос про активность. Бордер появляется только при нажатии, или пока чекбокс выбран?.*/
+  box-shadow: 0px 0px 0px 2px rgba(131, 179, 211, 1);
 }
 
 .control-input:checked + .control-mark::before {
@@ -1100,12 +1144,86 @@ a {
   transform: translate(-50%, -50%);
 }
 
-/* Интерактив кнопок */
+/* Interactive buttons*/
+
+.newsletter-text:focus {
+  outline: none;
+}
+
+.date-input:hover {
+  background-color: #E6E6E6;
+  color: #000000;
+}
+
+.number-input:hover {
+  border: none;
+  outline: none;
+}
+
+.number-input:active {
+  border: none;
+  outline: none;
+}
+
+.number-input:focus {
+  border: none;
+  outline: none;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.minus:hover,
+.plus:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+.minus:active,
+.plus:active {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.close-modal:hover,
+.close-modal:active {
+  background-color: #E6E6E6;
+}
+
+.control-input:active + .control-mark {
+
+}
+
+.close-modal:active > svg{
+  opacity: 0.3;
+}
 
 .booking:hover,
 .registration:hover,
 .description-card-button:hover {
   background-color: #615048;
+}
+
+.social-button-vk:hover,
+.social-button-tg:hover,
+.social-button-yt:hover {
+  opacity: 1;
+}
+
+.social-button-vk:active,
+.social-button-tg:active,
+.social-button-yt:active {
+  opacity: 0.3;
+}
+
+.footer-contacts-address-phone:hover {
+  color: #756157;
+}
+
+.footer-contacts-address-phone:active {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .booking:active,
@@ -1124,14 +1242,17 @@ a {
 .newsletter-button:hover,
 .filter-button:hover,
 .to-favorites-button:hover,
-.switch-button:hover {
+.switch-button:hover,
+.submit-registration:hover,
+.tooltip:hover {
   background-color: #68A2CA;
 }
 
 .newsletter-button:active,
 .filter-button:active,
 .to-favorites-button:active,
-.switch-button:active {
+.switch-button:active,
+.submit-registration:active {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1212,15 +1333,17 @@ a {
   border: 2px solid #68A2CA;
 }
 
-.filter-selection:active {
+.filter-selection:active,
+.filter-selection:focus {
   border: 2px solid #3F5E72;
 }
 
 .filter-selection:disabled {
+  border: 2px solid #000000;
   opacity: 0.3;
 }
 
-/* тест вариация модального окна */
+/* Modal window */
 
 .modal {
   position: fixed;
@@ -1241,7 +1364,6 @@ a {
 
 .modal-content {
   background-color: #ffffff;
-  /*min-width: 717px;*/
   padding: 64px 70px;
   z-index: 1;
   margin: 15px 15px;
@@ -1284,6 +1406,7 @@ a {
   line-height: 36px;
   margin-top: 0;
   margin-bottom: 64px;
+  cursor: default;
 }
 
 .date-title {
@@ -1292,6 +1415,7 @@ a {
   font-weight: 700;
   text-transform: capitalize;
   align-self: center;
+  color: #000000;
 }
 
 .date-input {
@@ -1299,11 +1423,18 @@ a {
   background-color: #F2F2F2;
   padding: 12px 20px;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 24px;
   font-weight: 700;
   border: none;
   outline: none;
   border-radius: 4px;
+  cursor: text;
+  color: rgba(0,0,0,0.6);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .modal-filter-form {
@@ -1319,13 +1450,13 @@ a {
   align-items: center;
 }
 
-.container {
+.container-counter {
   display: flex;
   background-color: #F2F2F2;
   border-radius: 4px;
 }
 
-.container:not(:last-child) {
+.container-counter:not(:last-child) {
   margin-right: auto;
 }
 
@@ -1340,7 +1471,7 @@ a {
   border: 0;
   font-weight: 700;
   padding: 0;
-  max-width: 31px; /*test */
+  max-width: 31px;
 }
 
 .number-input::-webkit-inner-spin-button,
@@ -1349,20 +1480,28 @@ a {
   margin: 0;
 }
 
-.container button {
+.container-counter button {
   background-color: #F2F2F2;
   padding: 14px 10px;
   border: none;
-  max-height: 48px; /* потом вопрос, откуда доп. пространство в кнопке без уточнения высоты */
+  max-height: 48px;
   cursor: pointer;
 }
 
-#decrement {
+#decrement-childs,
+#decrement-adults {
   border-radius: 4px 0 0 4px;
 }
 
-#increment {
+#increment-childs,
+#increment-adults {
   border-radius: 0 4px 4px 0;
+}
+
+.minus,
+.plus {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .child-title {
@@ -1379,6 +1518,7 @@ a {
   margin-right: 46px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .submit-registration {
@@ -1391,13 +1531,14 @@ a {
   padding-bottom: 18px;
   text-transform: uppercase;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-/* tooltip test version*/
+/* Tooltip */
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  width: 216px; /*256*/
+  width: 216px;
   background-color: #333333;
   color: #FFFFFF;
   font-size: 16px;
@@ -1425,4 +1566,8 @@ a {
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
+}
+
+.tooltip-text {
+  cursor: default;
 }
