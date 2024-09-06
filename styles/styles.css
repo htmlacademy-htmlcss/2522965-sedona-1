@@ -427,6 +427,7 @@ a {
   text-align: center;
   border-radius: 4px;
   padding: 9px 22px 8px 22px;
+  cursor: default;
 }
 
 .switch-button {
