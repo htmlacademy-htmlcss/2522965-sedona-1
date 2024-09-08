@@ -49,6 +49,7 @@ body {
   color: #000000;
   font-size: 18px;
   margin: 0;
+  min-width: 1200px;
 }
 
 .button {
@@ -107,8 +108,8 @@ a {
 
 .logo {
   display: block;
-  margin-right: 28px;
   align-self: flex-start;
+  position: absolute;
 }
 
 .preview-background {
@@ -148,7 +149,7 @@ a {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
-  width: 651px;
+  width: 660px;
   margin-right: auto;
   margin-left: auto;
   cursor: default;
@@ -306,6 +307,7 @@ a {
   line-height: 21px;
   font-size: 18px;
   border-radius: 4px;
+  max-width: 292px;
   color: #333333;
   border: 2px solid #E5E5E5;
   padding: 12px 18px;
@@ -316,6 +318,7 @@ a {
   background-position: right 20px center;
   appearance: none;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .filter-content-components-wrapper h1 {
@@ -325,6 +328,10 @@ a {
   margin-bottom: 8px;
   margin-top: 0;
   cursor: default;
+}
+
+.catalog-filter-title {
+  text-transform: capitalize;
 }
 
 .breadcrumbs li {
@@ -446,7 +453,6 @@ a {
 }
 
 .navigation {
-  height: 64px;
   display: flex;
   align-items: center;
   padding: 0px 70px;
@@ -458,8 +464,9 @@ a {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 168px;
   margin-right: auto;
+  flex-wrap: wrap;
 }
 
 .navigation-logo {
@@ -586,22 +593,25 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
 }
 
 .social-list {
-  display: flex;
+  display: grid;
   align-items: center;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .booking {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
+  display: inline-block;
+  min-width: 92px;
 }
 
 /* Section filter-content */
@@ -890,51 +900,60 @@ a {
   text-underline-position: under;
 }
 
+.navigation-user-list {
+  list-style: none;
+  display: flex;
+  padding: 14px 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+.navigation-user-item:not(:last-child) {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.navigation-user-item:nth-child(2) {
+  position: relative;
+  margin-right: 20px;
+}
+
 .search-icon-nav {
-  display: block;
+  display: inline-block;
   height: 20px;
   width: 20px;
   background: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: bottom 0.5px right 0.5px;
-  margin-right: 24px;
 }
 
 .card-icon-nav {
-  position: relative;
-  display: block;
+  display: inline-block;
   height: 20px;
   width: 20px;
   background: url("../images/icons/card.svg");
   background-repeat: no-repeat;
-  margin-right: 32px;
-}
-
-.navigation-user li:first-child,
-.navigation-user li:nth-child(2) {
-  padding: 22px 12px;
-}
-
-.navigation-user li:nth-child(2) {
-  margin-right: 20px;
 }
 
 .card-counts {
   position: absolute;
-  top: -11px;
-  right: -8px;
   height: 10px;
   padding: 5px 5px 5px 4px;
+  text-align: center;
   width: 11px;
   border-radius: 50%;
   background-color: #7DB54F;
-  display: flex;
+  left: 20px;
+  top: -3px;
 }
 
 .card-counts-number {
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
+  display: block;
 }
 
 .social-button-vk {
@@ -997,7 +1016,8 @@ a {
 }
 
 .layout-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   list-style: none;
   margin-top: 0;
@@ -1190,10 +1210,6 @@ input[type='date']::-webkit-calendar-picker-indicator:hover {
 .close-modal:hover,
 .close-modal:active {
   background-color: #E6E6E6;
-}
-
-.control-input:active + .control-mark {
-
 }
 
 .close-modal:active > svg{
