@@ -160,9 +160,11 @@
           </button>
           <form class="modal-filter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="date-arrival" class="date-title">дата заезда:</label>
-            <input id="date-arrival" class="date-input" type="date" name="date-of-arrival">
+            <input id="date-arrival" class="date-input" type="text" name="date-of-arrival" placeholder="Укажите дату">
+            <span class="date-check check-error">Мы не можем отправить вас в прошлое.</span>
             <label for="date-departure" class="date-title">дата выезда:</label>
-            <input id="date-departure" class="date-input" type="date" name="date-of-departure">
+            <input id="date-departure" class="date-input" type="text" name="date-of-departure" placeholder="Укажите дату">
+            <span class="date-check">На эти даты есть свободные номера. Пока есть.</span>
             <label for="adults-number" class="date-title">взрослые:</label>
             <div class="guests-number-wrapper">
               <div class="container-counter">
