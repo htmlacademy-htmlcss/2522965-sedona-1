@@ -48,3 +48,4 @@ incrementChilds.addEventListener('click', () => {
     childsNumber.value = parseInt(childsNumber.value) + 1;
   }
 });
+

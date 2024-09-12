@@ -112,13 +112,13 @@
         <section class="suggestion">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Седоне</p>
-          <a id="modal-open-button" class="button registration">Поиск гостиницы в Седоне</a>
+          <a id="modal-open-button" class="button registration" href="#">Поиск гостиницы в Седоне</a>
         </section>
         <section class="newsletter">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
+            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail" required>
             <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -153,17 +153,17 @@
       <div class="modal" id="registration-modal">
         <section class="modal-content">
           <h2>поиск гостиницы в седоне</h2>
-          <button class="close-modal">
+          <button class="close-modal" type="button">
             <svg width="15" height="15">
               <use xlink:href="#close-btn"></use>
             </svg>
           </button>
           <form class="modal-filter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="date-arrival" class="date-title">дата заезда:</label>
-            <input id="date-arrival" class="date-input" type="text" name="date-of-arrival" placeholder="Укажите дату">
+            <input id="date-arrival" class="date-input" type="text" name="date-of-arrival" placeholder="Укажите дату" required>
             <span class="date-check check-error">Мы не можем отправить вас в прошлое.</span>
             <label for="date-departure" class="date-title">дата выезда:</label>
-            <input id="date-departure" class="date-input" type="text" name="date-of-departure" placeholder="Укажите дату">
+            <input id="date-departure" class="date-input" type="text" name="date-of-departure" placeholder="Укажите дату" required>
             <span class="date-check">На эти даты есть свободные номера. Пока есть.</span>
             <label for="adults-number" class="date-title">взрослые:</label>
             <div class="guests-number-wrapper">

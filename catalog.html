@@ -55,16 +55,10 @@
           <div class="filter-content-components-wrapper">
             <h1>Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
-              <li>
-                <a class="breadcrumbs-home" href="index.html">
-                  <span class="visually-hidden">Главная</span>
-                </a>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-home-icon" href="index.html"></a>
               </li>
-              <li class="breadcrumbs-arrow">
-              </li>
-              <li class="breadcrumbs-item-current">
-                <a href="catalog.html">Гостиницы</a>
-              </li>
+              <li class="breadcrumbs-item active">гостиницы</li>
             </ul>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="catalog-filter-group">
@@ -98,21 +92,21 @@
                 <ul class="catalog-filter-list">
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" name="category" checked>
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="hotel" checked>
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" name="category">
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="motel">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" name="category">
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="apartments">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Апартаменты</span>
                     </label>
