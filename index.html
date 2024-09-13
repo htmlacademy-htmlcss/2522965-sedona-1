@@ -20,33 +20,42 @@
               <a class="navigation-link navigation-link-current" href="#">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="about.html">О Седоне</a>
+              <a class="navigation-link" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0" target="_blank">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <a class="search-icon-nav" href="#">
-            <span class="visually-hidden">
-               Поиск
-            </span>
-          </a>
-          <a class="card-icon-nav" href="#">
-            <span class="visually-hidden">
-              Избранные
-             </span>
-            <div class="card-counts">
-              <span class="card-counts-number">12</span>
-            </div>
-          </a>
-          <a class="button booking" href="#">Хочу сюда!</a>
+
+          <ul class="navigation-user-list">
+            <li class="navigation-user-item">
+              <a class="search-icon-nav" href="#"></a>
+                <span class="visually-hidden">
+                  Поиск
+                </span>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="card-icon-nav" href="#"></a>
+                <span class="visually-hidden">
+                  Избранные
+                </span>
+                <div class="card-counts">
+                  <span class="card-counts-number">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="button booking" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
         </nav>
       </header>
 
       <main class="page-main main-container">
         <div class="preview-background">
           <h1 class="visually-hidden">Туризм по городу «Седона»</h1>
-          <img class="preview-sedona" alt="welcome to the gorgeous Sedona"src="images/preview-header.svg" width="458" height="352">
+          <img class="preview-sedona" alt="welcome to the gorgeous Sedona" src="images/preview-header.svg" width="458" height="352">
         </div>
         <article class="greeting">
           <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -103,13 +112,13 @@
         <section class="suggestion">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Седоне</p>
-          <a id="modal-open-button" class="button registration">Поиск гостиницы в Седоне</a>
+          <a id="modal-open-button" class="button registration" href="#">Поиск гостиницы в Седоне</a>
         </section>
         <section class="newsletter">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
+            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail" required>
             <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -135,6 +144,7 @@
         </ul>
         <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer-logo-copyright" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">Логотип создателя сайта</span>
           <svg width="115" height="34">
             <use xlink:href="#logo-academy"></use>
           </svg>
@@ -144,27 +154,32 @@
       <div class="modal" id="registration-modal">
         <section class="modal-content">
           <h2>поиск гостиницы в седоне</h2>
-          <button class="close-modal">
+          <button class="close-modal" type="button">
+            <span class="visually-hidden">Закрыть модальное окно</span>
             <svg width="15" height="15">
               <use xlink:href="#close-btn"></use>
             </svg>
           </button>
           <form class="modal-filter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="date-arrival" class="date-title">дата заезда:</label>
-            <input id="date-arrival" class="date-input" type="date" name="date-of-arrival">
+            <input id="date-arrival" class="date-input" type="text" name="date-of-arrival" placeholder="Укажите дату" required>
+            <span class="date-check check-error">Мы не можем отправить вас в прошлое.</span>
             <label for="date-departure" class="date-title">дата выезда:</label>
-            <input id="date-departure" class="date-input" type="date" name="date-of-departure">
+            <input id="date-departure" class="date-input" type="text" name="date-of-departure" placeholder="Укажите дату" required>
+            <span class="date-check">На эти даты есть свободные номера. Пока есть.</span>
             <label for="adults-number" class="date-title">взрослые:</label>
             <div class="guests-number-wrapper">
               <div class="container-counter">
                 <button class="minus" id="decrement-adults" type="button">
-                  <svg width="20" height="20">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                  <svg class="svg-outline" width="20" height="20">
                     <use xlink:href="#minus-btn"></use>
                   </svg>
                 </button>
                 <input id="adults-number" class="number-input" type="number" min="0" max="10" step="1" value="1" name="adults-counter">
                 <button class="plus" id="increment-adults" type="button">
-                  <svg width="20" height="20">
+                  <span class="visually-hidden">Увеличить количество</span>
+                  <svg class="svg-outline" width="20" height="20">
                     <use xlink:href="#plus-btn"></use>
                   </svg>
                 </button>
@@ -179,13 +194,15 @@
                </div>
                <div class="container-counter">
                 <button class="minus" id="decrement-childs" type="button">
-                  <svg width="20" height="20">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                  <svg class="svg-outline" width="20" height="20">
                     <use xlink:href="#minus-btn"></use>
                   </svg>
                 </button>
                 <input id="childs-number" class="number-input" type="number" min="0" max="10" step="1" value="1" name="child-counter">
                 <button class="plus" id="increment-childs" type="button">
-                  <svg width="20" height="20">
+                  <span class="visually-hidden">Увеличить количество</span>
+                  <svg class="svg-outline" width="20" height="20">
                     <use xlink:href="#plus-btn"></use>
                   </svg>
                 </button>

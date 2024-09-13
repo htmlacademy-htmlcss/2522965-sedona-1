@@ -18,26 +18,35 @@
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="about.html">О Седоне</a>
+              <a class="navigation-link" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0" target="_blank">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
             </li>
           </ul>
-          <a class="search-icon-nav" href="#">
-            <span class="visually-hidden">
-               Поиск
-            </span>
-          </a>
-          <a class="card-icon-nav" href="#">
-            <span class="visually-hidden">
-              Избранные
-             </span>
-            <div class="card-counts">
-              <span class="card-counts-number">12</span>
-            </div>
-          </a>
-          <a class="button booking" href="#">Хочу сюда!</a>
+
+          <ul class="navigation-user-list">
+            <li class="navigation-user-item">
+              <a class="search-icon-nav" href="#"></a>
+                <span class="visually-hidden">
+                  Поиск
+                </span>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="card-icon-nav" href="#"></a>
+                <span class="visually-hidden">
+                  Избранные
+                </span>
+                <div class="card-counts">
+                  <span class="card-counts-number">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="button booking" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
         </nav>
       </header>
 
@@ -46,16 +55,10 @@
           <div class="filter-content-components-wrapper">
             <h1>Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
-              <li>
-                <a class="breadcrumbs-home" href="index.html">
-                  <span class="visually-hidden">Главная</span>
-                </a>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-home-icon" href="index.html"></a>
               </li>
-              <li class="breadcrumbs-arrow">
-              </li>
-              <li class="breadcrumbs-item-current">
-                <a href="catalog.html">Гостиницы</a>
-              </li>
+              <li class="breadcrumbs-item active">гостиницы</li>
             </ul>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="catalog-filter-group">
@@ -89,21 +92,21 @@
                 <ul class="catalog-filter-list">
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" for="filter-form" name="category" checked>
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="hotel" checked>
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" for="filter-form" name="category">
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="motel">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="visually-hidden control-input-radio" type="radio" for="filter-form" name="category">
+                      <input class="visually-hidden control-input-radio" type="radio" name="category" value="apartments">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">Апартаменты</span>
                     </label>
@@ -114,7 +117,7 @@
                 <legend>Стоимость, ₽:</legend>
                 <div class="form-text-wrapper">
                   <div class="form-text">
-                    <input id="filter-form-min" type="number" name="filter-min" class="inputf-min" value="0">
+                    <input id="filter-form-min" type="number" name="filter-min" class="input-min" value="0">
                     <label for="filter-form-min" class="static-value">от</label>
                   </div>
                   <div class="form-text">
@@ -185,7 +188,7 @@
                 <li></li>
                 <li></li>
               </ul>
-              <p class="rating" href="#">Рейтинг: 8,5</p>
+              <p class="rating">Рейтинг: 8,5</p>
             </li>
             <li class="product-item">
               <a class="product-card-link-image" href="#">
@@ -197,14 +200,14 @@
               <p>Гостиница</p>
               <b>От 5000 ₽</b>
               <a class="button description-card-button" href="#">Подробнее</a>
-              <a class="button description-card-button to-favorites-button desired" href="#">В избранном</a>
+              <a class="button description-card-button desired" href="#">В избранном</a>
               <ul class="stars-count" aria-label="четырёхзвездочная гостиница">
                 <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
               </ul>
-              <p class="rating" href="#">Рейтинг: 9,2</p>
+              <p class="rating">Рейтинг: 9,2</p>
             </li>
             <li class="product-item">
               <a class="product-card-link-image" href="#">
@@ -222,7 +225,7 @@
                 <li></li>
                 <li></li>
               </ul>
-              <p class="rating" href="#">Рейтинг: 6,9</p>
+              <p class="rating">Рейтинг: 6,9</p>
             </li>
             <li class="product-item">
               <a class="product-card-link-image" href="#">
@@ -239,7 +242,7 @@
                 <li></li>
                 <li></li>
               </ul>
-              <p class="rating" href="#">Рейтинг: 5,0</p>
+              <p class="rating">Рейтинг: 5,0</p>
             </li>
           </ul>
         </section>
@@ -255,7 +258,7 @@
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail">
+            <input class="newsletter-text" type="email" id="newsletter-mail" name="newsletter-mail" placeholder="Ваш e-mail" required>
             <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
         </section>
