@@ -1156,6 +1156,21 @@ input::-webkit-slider-thumb:focus {
 
 /* Interactive buttons*/
 
+.control:focus-within {
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.range-min:focus-visible {
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.range-max:focus-visible {
+  outline: 3px solid #31688c;
+  border-radius: 4px;
+}
+
 .minus:focus-visible,
 .plus:focus-visible {
   color: #000000;
