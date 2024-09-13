@@ -100,6 +100,7 @@ a {
 
 .preview-background {
   overflow: hidden;
+  background-color: #83B3D3;
   background-image: url("../images/preview-header-background-mask.svg"), url("../images/preview-header-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, cover;
@@ -222,6 +223,7 @@ a {
 }
 
 .newsletter {
+  background-color: #527092;
   background-image: url("../images/blur-background-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,6 +276,7 @@ a {
 }
 
 .filter-content {
+  background-color: #527092;
   background-image: url(../images/blur-catalog-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1412,6 +1415,13 @@ input::-webkit-slider-thumb:focus {
 
 .date-input:focus {
   outline: 2px solid #000;
+  background-color: #E6E6E6;
+}
+
+.date-input:not(:placeholder-shown) + .date-check {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 5s, visibility 0s linear 1s;
 }
 
 
@@ -1517,7 +1527,8 @@ input::-webkit-slider-thumb:focus {
   color: #333333;
   margin-bottom: 23px;
   padding-left: 20px;
-  visibility: visible; /*hidden if empty */
+  opacity: 0;
+  visibility: hidden; /*visible if check */
   cursor: default;
 }
 
